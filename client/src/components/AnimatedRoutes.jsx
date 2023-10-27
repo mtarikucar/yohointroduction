@@ -1,14 +1,11 @@
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Upload from "../pages/Upload";
 import { AnimatePresence } from "framer-motion";
 
 import Layout from "../layouts/Layout";
+import Home from "../pages/Home/Home";
 
-import Home from "../pages/Home";
-import Category from "../pages/Category";
-import Post from "../pages/Post";
-import Unauthorized from "../pages/Unautharized";
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -17,10 +14,6 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/Category/:id" element={<Category />} />
-          <Route path="/Post/:id" element={<Post />} />
-          <Route path="/Upload" element={<Upload />} />
-          <Route path="/Unauthorized" element={<Unauthorized />} />
         </Route>
       </Routes>
     </AnimatePresence>

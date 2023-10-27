@@ -1,4 +1,5 @@
-import authReducer from "./AuthSlice";
+import languageReducer from "./LanguageSlice";
+import darkModeReducer from "./DarkModeSlice";
 
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
@@ -19,7 +20,8 @@ import {
   
   // Combine the reducers first
   const rootReducer = combineReducers({
-    auth: authReducer,
+    language: languageReducer,
+    darkMode: darkModeReducer
   });
   
   const persistConfig = {
