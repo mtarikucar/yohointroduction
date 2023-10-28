@@ -38,9 +38,9 @@ export default function CarouselCustom({ children }) {
     return (
         <div onWheel={handleScroll} className="relative h-full overflow-hidden">
             <motion.div
-                initial={{ x: '-100%' }}
-                animate={{ x: `-${activeIndex * (100 / children.length)}%` }}
-                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                initial={{ x: `-${(100 / children.length)}%`, opacity: "0%" }}
+                animate={{ x: `-${activeIndex * (100 / children.length)}%`, opacity:"100%", transition :{duration: 1} }}
+                transition={{ type: 'spring', stiffness: 300, damping: 300 }}
                 className="absolute rounded sm:rounded-none top-0 left-0 flex"
                 style={{ width: `${children.length * 100}%` }}
             >

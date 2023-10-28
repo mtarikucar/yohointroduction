@@ -5,10 +5,12 @@ import "react-toastify/dist/ReactToastify.css";
 import FooterCustom from "./Components/FooterCustom";
 import NavbarCustom from "./Components/Navbar/NavbarCustom";
 import DrawerCustom from "./Components/DrawerCustom";
+import ScrollToTop from "../hooks/ScrollToTop";
 
 const Layout = () => {
   return (
     <>
+      <ScrollToTop />
       <div className="flex flex-col h-screen justify-between">
         <NavbarCustom />
         <Outlet />

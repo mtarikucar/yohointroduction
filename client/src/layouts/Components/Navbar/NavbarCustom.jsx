@@ -1,34 +1,13 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
-  Button,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
-  Avatar,
-  Card,
-  IconButton,
+  Avatar
 } from "@material-tailwind/react";
-import {
-  CubeTransparentIcon,
-  UserCircleIcon,
-  CodeBracketSquareIcon,
-  Square3Stack3DIcon,
-  ChevronDownIcon,
-  Cog6ToothIcon,
-  InboxArrowDownIcon,
-  LifebuoyIcon,
-  PowerIcon,
-  RocketLaunchIcon,
-  Bars2Icon,
-} from "@heroicons/react/24/solid";
-import DrawerCustom from "../DrawerCustom";
+
 import { NavLink } from "react-router-dom";
-import NavList from "./NavList";
 import LanguageMenu from "./LanguageMenu";
+import NavListMenu from "./NavListMenu";
 
 
 
@@ -51,8 +30,8 @@ export default function NavbarCustom() {
           YOHO金融技术股份有限公司
         </Typography>
       </NavLink>
-      <div className="hidden lg:block lg:flex-row items-center justify-start">
-        <NavList />
+      <div className="flex flex-row items-center justify-start">
+        <NavListMenu />
       </div>
 
 
