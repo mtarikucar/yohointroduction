@@ -15,7 +15,7 @@ import NavListMenu from "./NavListMenu";
 
 export default function NavbarCustom() {
   return (
-    <Navbar className="stıcky top-0 z-40 max-w-full overflow-hidden bg-[#060417] rounded-none shadow-none backdrop-saturate-0 backdrop-blur-0 bg-opacity-100 border-none  itmx-auto flex items-center justify-between text-white">
+    <Navbar className="stıcky h-[12vh] top-0 z-40 max-w-full overflow-hidden bg-[#060417] rounded-none shadow-none backdrop-saturate-0 backdrop-blur-0 bg-opacity-100 border-none  itmx-auto flex items-center justify-between text-white">
 
       <NavLink to={"/"}>
 
@@ -36,7 +36,7 @@ export default function NavbarCustom() {
 
 
 
-      <span className="hidden lg:block">
+      <span className=" lg:block">
         <LanguageMenu />
       </span>
 

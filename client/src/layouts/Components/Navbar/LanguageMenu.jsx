@@ -11,18 +11,30 @@ import {
   ChevronDownIcon,
 } from "@heroicons/react/24/solid";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { setLanguage } from "../../../store/LanguageSlice"
+import i18n from 'i18next';
 
-// profile menu component
+
 const LanguageItems = [
-  { label: "Türkçe" },
-  { label: "English" },
-  { label: "繁體中文" },
-  { label: "简体中文" },
-
+  { label: "Türkçe", code: "tr" },
+  { label: "English", code: "en" },
+  { label: "繁體中文", code: "zh-TW" },
+  { label: "简体中文", code: "zh-CN" },
 ];
 
+
 export default function LanguageMenu() {
+  const dispatch = useDispatch();
+  const currentLanguage = useSelector(state => state.language.value);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const handleLanguageChange = (lang) => {
+
+    dispatch(setLanguage(lang));
+    i18n.changeLanguage(lang);
+    closeMenu();
+  };
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -34,7 +46,7 @@ export default function LanguageMenu() {
           color="blue-gray"
           className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto lg:px-4 lg:py-2"
         >
-          DIL
+          {currentLanguage}
           <ChevronDownIcon
             strokeWidth={2.5}
             className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
@@ -43,18 +55,18 @@ export default function LanguageMenu() {
         </Button>
       </MenuHandler>
       <MenuList className="p-1">
-        {LanguageItems.map(({ label, icon }, key) => {
+        {LanguageItems.map(({ label, code }, key) => {
           return (
             <MenuItem
-              key={label}
-              onClick={closeMenu}
+              key={code}
+              onClick={() => handleLanguageChange(code)}
               className={`flex items-center gap-2 rounded`}
             >
               <Typography
                 as="span"
                 variant="small"
                 className="font-normal"
-                color={"inherit"}
+                color={currentLanguage === code ? "blue" : "inherit"}
               >
                 {label}
               </Typography>

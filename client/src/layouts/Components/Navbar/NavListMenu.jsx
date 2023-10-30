@@ -5,91 +5,56 @@ import {
     MenuHandler,
     MenuList,
     MenuItem,
-    Card,
     Button
 } from "@material-tailwind/react";
 import {
-    Square3Stack3DIcon,
     ChevronDownIcon,
-    CursorArrowRaysIcon
 
 } from "@heroicons/react/24/solid";
-import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-// nav list menu
-const navListMenuItems = [
-    {
-        title: "FinTech and Services",
-        content: [
-            {
-                title: "software development",
-                route: "software"
-            },
-            {
-                title: "Guarantees and Guarantees",
-                route: "/"
-            },
-            {
-                title: "Movable and real estate management",
-                route: "/"
-            },
-            {
-                title: "Guarantee and mortgage registration",
-                route: "/"
-            },
-            {
-                title: "Claims and Debt Protection",
-                route: "/"
-            },
-        ]
-    },
-    {
-        title: "FinTech and Services",
-        content: [
-            {
-                title: "software development",
-                route: "/"
-            },
-            {
-                title: "Guarantees and Guarantees",
-                route: "/"
-            },
-            {
-                title: "Movable and real estate management",
-                route: "/"
-            },
-            {
-                title: "Guarantee and mortgage registration",
-                route: "/"
-            },
-            {
-                title: "Claims and Debt Protection",
-                route: "/"
-            },
-        ]
-    },
 
-];
+
 export default function NavListMenu() {
     const [openedMenuIndex, setOpenedMenuIndex] = React.useState(null);
+    const { t } = useTranslation();
+
+    const navListMenuItems = t('navListMenu.sections', { returnObjects: true });
+
 
     const toggleMenu = (index) => {
         if (openedMenuIndex === index) {
-            setOpenedMenuIndex(null); // Close the currently opened menu
+            setOpenedMenuIndex(null);
         } else {
-            setOpenedMenuIndex(index); // Open the clicked menu
+            setOpenedMenuIndex(index);
         }
     };
 
+    const [activeHash, setActiveHash] = React.useState(window.location.hash);
+
+    // Use effect to listen for hash changes and update the activeHash state.
+    React.useEffect(() => {
+        const handleHashChange = () => {
+            setActiveHash(window.location.hash);
+        };
+
+        window.addEventListener('hashchange', handleHashChange);
+
+        // Clean up the event listener when the component is unmounted.
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
+
     return (
         <>
-            {navListMenuItems.map(({ title, content }, idx) => (
+            {navListMenuItems.map(({ title, items }, idx) => (
                 <Menu key={idx} open={openedMenuIndex === idx} handler={() => toggleMenu(idx)} placement="bottom-end">
                     <MenuHandler>
                         <Button
                             variant="text"
                             color="white"
-                            className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto lg:px-4 lg:py-2"
+                            className="flex items-center  rounded-full  lg:ml-auto font-thin text-xs"
                             onClick={() => toggleMenu(idx)}
                         >
                             {title}
@@ -100,13 +65,14 @@ export default function NavListMenu() {
                         </Button>
                     </MenuHandler>
                     <MenuList className="p-1">
-                        {content.map(({ title: menuItemTitle, route }) => (
-                            <NavLink to={"Detail/" + route}>
+                        {items.map(({ title: menuItemTitle, route }) => (
+                            <a href={`#${title}`}>
                                 <MenuItem
                                     key={menuItemTitle}
-                                    onClick={() => setOpenedMenuIndex(null)} // Close the menu when a submenu item is clicked
-                                    className={`flex items-center gap-2 rounded`}
+                                    onClick={() => setOpenedMenuIndex(null)}
+                                    className={`flex items-center gap-2 rounded ${activeHash === `#${route}` ? 'underline' : ''}`}
                                 >
+
                                     <Typography
                                         as="span"
                                         variant="small"
@@ -116,7 +82,8 @@ export default function NavListMenu() {
                                         {menuItemTitle}
                                     </Typography>
                                 </MenuItem>
-                            </NavLink>
+                            </a>
+
                         ))}
                     </MenuList>
                 </Menu>

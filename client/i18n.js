@@ -1,21 +1,28 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-/* import Backend from 'i18next-http-backend'; */
+
+import tr from './locales/tr.json';
+import cn from './locales/zh.json';
+import en from './locales/en.json'
+
+const resources = {
+  en: { translation: en },
+  tr: { translation: tr },
+  cn: { translation: cn }
+};
+
 
 i18n
-  /* .use(Backend) */
   .use(initReactI18next)
   .init({
-    lng: 'tr', // başlangıç dili olarak 'tr' seçilmiştir.
+    resources,
+    lng: 'tr', 
     fallbackLng: 'tr', 
     interpolation: {
       escapeValue: false,
     },
     react: {
       useSuspense: false,
-    },
-    backend: {
-      loadPath: '/locales/{{lng}}.json', 
     },
   });
 

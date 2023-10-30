@@ -1,0 +1,92 @@
+{
+  "carousel": {
+    "slide1": {
+      "title": "About Us",
+      "description": "The company operates in the procurement, sale, and leasing of computer and electronic systems, software development, hardware equipment supply and system analysis, project management and consulting, computer and software training, network communication services and training, information and communication consultancy and brokerage services. and software development and presentation, integrated software production and development, software consultancy, and services. Additionally, the company deals in movable and immovable property transactions, collateral and mortgage registration, protection of receivables and debts, warranties and guarantees, securities transactions, acquisition and transfer of intellectual property rights, obtaining domestic and foreign loans, leaving institutions and partnerships, purchasing equipment, importing and exporting, establishing agencies and representatives, participating in tenders and bids, attending exhibitions, participating in commercial activities, developing public relations and preparing publications."
+    },
+    "slide2": {
+      "title": "Slide 2 Title",
+      "description": "Slide 2 description."
+    },
+    "slide3": {
+      "title": "Slide 3 Title",
+      "description": "Slide 3 description."
+    },
+    "slide4": {
+      "title": "Slide 4 Title",
+      "description": "Slide 4 description."
+    }
+  },
+  "navListMenu": {
+    "sections": [
+      {
+        "title": "Selmas",
+        "introduction": "We specialize in financial technology, focusing on innovation and service; leading the trend of science and technology, developing innovative software such as finance, virtual POS, etc.; We have technical applications and core technologies like media flow, mobile services, and crypto assets; Our comprehensive services cover asset transactions, innovative construction, guarantee support, financial transaction planning, and business innovation.",
+        "items": [
+          {
+            "title": "Software Development",
+            "route": "software",
+            "content": "Any kind of financial service software, banking software, international money transfer software, virtual POS systems and software, collection systems and software, payment system software, stock market and finance software and training software, streaming services, mobile services, cryptocurrency and crypto asset projects, blockchain projects and mobile finance services and custom software projects."
+          },
+          {
+            "title": "Warranties and Guarantees",
+            "route": "deneme1",
+            "content": "It can deal with the following matters to realize the company purpose and subject. It can acquire movable and immovable properties, buy, sell, rent by ordinary rent or financial leasing, lease out, manage, construct any kind of building, facility or similar construction on the immovable properties it owns or rents, or have them built by third parties."
+          },
+          {
+            "title": "Movable and Immovable Management",
+            "route": "deneme2",
+            "content": "The company can show its movable and immovable properties as collateral in favor of the company or third parties. For this purpose, it can register and establish pledges and mortgages on the said properties."
+          },
+          {
+            "title": "Collateral and Mortgage Registration",
+            "route": "deneme4",
+            "content": "The company can give and take mortgages and pledges of all kinds, forms, and ranks to secure its receivables and debts. It can register, transfer and assign them; it can cancel and modify the existing and to be established mortgages and pledges."
+          },
+          {
+            "title": "Protection of Receivables and Debts",
+            "route": "deneme3",
+            "content": "The company can give guarantees, assurances in favor of the company and third parties, or commit as joint debtor and joint and several guarantor."
+          },
+          {
+            "title": "Protection of Receivables and Debts",
+            "route": "deneme3",
+            "content": "Without being involved in securities brokerage activities, it can buy, sell securities such as shares, bonds, profit-sharing papers, benefit from usufruct rights, establish usufruct rights, and enter into all kinds of transactions related to securities, carry out all kinds of commercial, industrial, and financial transactions."
+          }
+        ]
+      },
+      {
+        "title": "Import, Export and International Trade",
+        "introduction": "We conduct domestic and international trade activities, import, export, and leasing operations.",
+        "items": [
+          {
+            "title": "Trade Activities",
+            "route": "deneme5",
+            "content": "Can participate in domestic and foreign (import or export) trade activities."
+          },
+          {
+            "title": "Purchase, Import, and Export of Vehicles and Equipment",
+            "route": "deneme6",
+            "content": "To be able to do the tasks within the scope of the company, any means, vehicles, machines, equipment, electronic or electronic devices, hardware can be purchased, leased, imported, and exported."
+          }
+        ]
+      },
+      {
+        "title": "Soc Media",
+        "introduction": "We engage in various social media activities and offer comprehensive services in this area.",
+        "items": [
+          {
+            "title": "Attending Exhibitions",
+            "route": "deneme8",
+            "content": "We can participate in exhibitions."
+          },
+          {
+            "title": "Participating in Commercial Activities",
+            "route": "deneme7",
+            "content": "Can be involved in commercial activities."
+          }
+        ]
+      }
+    ]
+  }
+}

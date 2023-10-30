@@ -1,0 +1,186 @@
+{
+  "carousel": {
+    "slide1": {
+      "title": "Hakkımızda",
+      "description": "Şirket, bilgisayar ve elektronik sistemlerin alımı, satımı ve kiralanması, yazılım geliştirme, donanım ekipman temini ve sistem analizi, proje yönetimi ve danışmanlık, bilgisayar ve yazılım eğitimi, ağ iletişim hizmetleri ve eğitimi, bilgi ve iletişim danışmanlığı ve aracılık hizmetleri konularında faaliyet göstermektedir. ve bilgisayar yazılımı Geliştirme ve sunum, entegre yazılım üretimi ve geliştirme, yazılım danışmanlığı ve hizmetleri. Ayrıca şirketiniz taşınır ve taşınmaz mal işlemleri, teminat ve ipotek tescili, alacak ve borçların korunması, garanti ve garantiler, menkul kıymet işlemleri, fikri mülkiyet haklarının edinimi ve devri, yerli ve yabancı kredi alınması, kuruluş ve ortaklıklardan çıkış, araçlar Ekipman alımı, ithalatı ve ihracatı, temsilcilik ve acentelerin kurulması, ihalelere ve ihalelere katılım, sergilere katılım, ticari etkinliklere katılım, tanıtım ve halkla ilişkiler faaliyetlerinin geliştirilmesi ve yayınların hazırlanması."
+    },
+    "slide2": {
+      "title": "Slide 2 Başlığı",
+      "description": "Slide 2 açıklaması."
+    },
+    "slide3": {
+      "title": "Slide 3 Başlığı",
+      "description": "Slide 3 açıklaması."
+    },
+    "slide4": {
+      "title": "Slide 4 Başlığı",
+      "description": "Slide 4 açıklaması."
+    }
+  },
+  "navListMenu": {
+    "sections": [
+      {
+        "title": "selmas",
+        "introduction": "Finansal teknoloji alanında, inovasyona ve hizmete odaklanan uzmanız; Bilim ve teknolojinin trendine öncülük eden, finans, sanal POS vb. gibi yenilikçi yazılımlar geliştiriyor;İlerlemenize yardımcı olacak medya akışı, mobil hizmetler ve kripto varlıkları gibi teknik uygulamalarımız ve ana teknolojilerimiz var; Kapsamlı hizmetlerimiz varlık işlemlerini, yenilikçi inşaatı, garanti desteğini, finansal işlem planlamasını ve iş inovasyonunu kapsar.",
+        "items": [
+          {
+            "title": "yazılım geliştirme",
+            "route": "software",
+            "content": "Her türlü finansal hizmet yazılımı, bankacılık yazılımı,uluslararası para transferi yazılımları, sanal pos sistemleri ve yazılımları, tahsilat sistemleri ve yazılımları, ödeme sistemleri yazılımları, borsa ve finans yazılımları ve eğitin yazılımları,streaming servisler mobil servisler, kripto para ve kripto varlık projeleri, blok zincir projeleri ve mobil finansı servisler ile projeye özel yazlımlar yapmak."
+          },
+          {
+            "title": "Garantiler ve Teminatlar",
+            "route": "deneme1",
+            "content": "Diğer taratan şirket amaç ve konusu ile ilgili hususları gerçekleştirmek için, aşağıdaki hususlar ile ilgili iştigal edebilir.Menkul ve gayrimenkul mallan iktisap edebilir, satın alabilir, satabilir, adi kira ve finansal kiralamayolu ile kiralayabilir, kiraya verebilir her surette tasarruf edebilir işletmecilik. yapabilir, maliki olduğu veya kiraladığı gayri menkuller üzerinde her türlü bina, tesis ve benzeri inşaatı bizzat yapabilir veya üçünçül şahıslara yaptırabilir."
+          },
+          {
+            "title": "Taşınır ve taşınmaz yönetimi",
+            "route": "deneme2",
+            "content": "şirke e ait menkul ve gayrimenkul malları şirket veya üçüncü şahılar lehine temin:olarak gösterebilir. Bu amaçla söz konusu mallar üzerinde rehin veipotek tesis ve tescil edebilir."
+          },
+          {
+            "title": "Teminat ve ipotek kaydı",
+            "route": "deneme4",
+            "content": "Şirketin alacak ve borçlarını teminen her cins, şekil ve sırada ipotek ve rehin verebilir ipotek ve rehin alabilir. Bunları tescil, devir ve temlik edebilir, mevcut ve tesis edilecek ipotek rehinleri fek ve tadil edebilir."
+          },
+          {
+            "title": "Alacaklar ve Borç Koruması",
+            "route": "deneme3",
+            "content": "Şirket ve üçüncü şahıslar lehine kefalet teminat, garanti verebilir veya müşterek borçlu ve müteselsil kefil sıfat ile taahhütlerde bulunabilir. "
+          },
+          {
+            "title": "Alacaklar ve Borç Koruması",
+            "route": "deneme3",
+            "content": "Menkul kıymetler aracılık faaliyetinde olmamak şartı ile, hisse senedi, tahvil,intifa senedi,kâr ortaklığı beIgeleri gibi menkul kıymetleri alabilir, satabilir,bunların üzerinden kefalet verebilir, intifa hakları tesis edebilir, intifa haklarından yararlanabilir, menkul kıymetler ile ilgili her türlü muamelelere girişe bilir, her türlü ticari, sınai,mali işlemler yapabilir."
+          }
+        ]
+      },
+      {
+        "title": "İthalat, İhracat ve Uluslararası Ticaret",
+        "introduction" : "Yurt içi ve yurt dışı ticaret faaliyetleri, ithalat, ihracat ve kiralama operasyonlarını yürütüyoruz.",
+        "items": [
+          {
+            "title": "ticaret faaliyetleri",
+            "route": "deneme5",
+            "content": "Yurtiçinde ve yurtdışında (ithalat veya ihracat yapmak) ticaret faaliyetlerine iştirak edebilir."
+          },
+          {
+            "title": "Araç ve ekipmanın alımı, ithalatı ve ihracı",
+            "route": "deneme6",
+            "content": "Şirket konusuna giren islerin yapılabilmesi her türlü vasıta, araç,makine,tesisat teçhizat,elektrikli veya elektronik cihazlar, donanınlar salım alabilir,kiralayabilir, ithal v ihraç edebilir."
+          }
+        ]
+      },
+      {
+        "title": "Kredi İşleri",
+        "introduction" : "Kısa vadeli, orta vadeli ve uzun vadeli yurt içi ve yurt dışı krediler yapabiliyoruz.",
+        "items": [
+          {
+            "title": "ticaret faaliyetleri",
+            "route": "deneme5",
+            "content": "Türk ve yabancı bankalardan veya diğer finans kuruluşlarına kısa, orta, uzun vadeli i ve diş kaynaklı kredi temin edebilir, kullanabilir."
+          }
+         
+        ]
+      },
+      {
+        "title": "yazılım geliştirme",
+        "introduction" : "Bilgisayar yazılımı geliştirmeye, web tasarımına odaklanıyoruz ve multimedya ürün üretimi, reklam, e-ticaret ve bilgisayar donanımı entegrasyonu için çeşitli yazılım üretimi sağlıyoruz.",
+        "items": [
+          {
+            "title": "Yazılım geliştirme ve sunum",
+            "route": "deneme5",
+            "content": "Her türlü bilgisayar yazılımlarının üretimi ile sunum web tasarım, bilişim, animasyon simülasyon gibi çoklu ortam ürünlerini hazırlamak, aracılık hizmetleri, reklamtanıtım hizmetleri, e-ticaretini, alım satımını ve pazarlamasını yapmak."
+          },
+          {
+            "title": "Yazılım entegrasyonu, geliştirme, yayma",
+            "route": "deneme6",
+            "content": "Her türlü bilgisayar donanımı içine işlenmiş yazılımların,işletim sistemi yazılımları uygulama yazılımları veri tabanı,verimlilik artıran yazılımları, multimedya (çoklu ortam) yazılım ürününü ve benzeri sair her türlü yazılımı üretmek,geliştirmek,işlenmesini çoğaltılması, her türlü fiziki ve elektronik ortamda yayılmasını yapmak."
+          }
+        ]
+      },
+      {
+        "title": "yönetim ve danışmanlık",
+        "introduction" : "Yazılım proje yönetimi ve danışmanlığı, geliştirme, veritabanı analizi ve ilgili hizmetleri sağlıyoruz.",
+        "items": [
+          {
+            "title": "Proje yönetimi ve danışmanlık",
+            "route": "deneme5",
+            "content": "Yazılım geliştirme proje yöneticiliği yapmak ve bu konuda danışmanlık yapmak."
+          },
+          {
+            "title": "Bilgi ve iletişim danışmanlığı ve aracılık hizmetleri",
+            "route": "deneme6",
+            "content": "Bilgi iletişiminde danışmanlık ve aracılık yapmak."
+          },
+          {
+            "title": "Yazılım danışmanlığı ve hizmetleri",
+            "route": "deneme6",
+            "content": "Her türlü yazılımsal danışmanlık, geliştirme, veritabanı danışmanlığı,proje analiz ve danışmanlığı yazılımı yapmak vermek."
+          }
+        ]
+      },
+      {
+        "title": "Diğer İşler",
+        "introduction" : "Bilgisayar ve elektronik sistem uygulamaları sağlıyoruz, yazılım ve donanım ekipmanları geliştirip satıyoruz, eğitim ve konferanslar düzenliyoruz, ağ iletişim hizmetleri sağlıyoruz.",
+        "items": [
+          {
+            "title": "Bilgisayar ve elektronik sistemlerin satın alınması, satışı ve kiralanması",
+            "route": "deneme5",
+            "content": "Bilgisayar alımında ve her türlü elektronik sistem, araç ve cihazlarda veya diğer teknolojik ortamlarda kullandırmak üzere her türlü yazılım, kod ve benze ürünleri geliştirmek ve kullandırmak,önceden üretilen bu nevi ürünlerin her türlü satış ve kiralama yapmak."
+          },
+          {
+            "title": "Bilgisayar ve yazılım eğitimi",
+            "route": "deneme6",
+            "content": "Her türlü bilgisayar ve yazılım eğitimi vermek, bu konularla toplantılar, seminerler v eğitim faaliyetleri düzenlemek."
+          },
+          {
+            "title": "Network communication services and training",
+            "route": "deneme6",
+            "content": "Her türlü network iletişin hizmet ve eğitimlerini sağlamak, bunlarla ilgili olarak her türlü alt yapı araç gereç ve tesislerini kurmak, çalıştırmak, alışım, kiralanmasını ve kiraya verilmesini yapmak yazılımlarını yapmak."
+          },
+          {
+            "title": "Hardware equipment provision and system analysis",
+            "route": "deneme6",
+            "content": "Donanım sağlamak ve bu amaçla sistem analiz ve tasarımını yapmak,uygulamaları kontrol etmek, değişiklikler yapmak uygulama paketleri geliştirmek ve yazılımlarını yapmak,pazarlamak."
+          },
+          {
+            "title": "Intellectual Property Acquisition and Transfer",
+            "route": "deneme6",
+            "content": "Yurt içinden veya yurt dışından patent, lisans, imtiyaz ticari marka,teknik yardım,knowhow, kullanım hakları, bilgisayar yazılımları ve diğer fikri ve sınai mülkiyet haklarını iktisap edebilir, bunları kiralayabilir, devir ve temlik edebilir."
+          },
+          {
+            "title": "Partnership establishment and exit",
+            "route": "deneme6",
+            "content": "Yurt içinde ve yurt dışında mevcut başka gerçek ve tüzel kişilikler ile ortaklık kurabileceği gibi mevcut şirketlere ortak sıfatı ile katılabilir birleşebilir,gerekli gördüğü hallerde bu ortaklıklardan ayrılabilir,bunları fesih ve tasfiye edebilir. "
+          },
+          {
+            "title": "Establishment of representative offices and agents",
+            "route": "deneme6",
+            "content": "Yurt içinde ve dışında temsilcilik, acentelik, şube verebilir, mümessillik, acentecilik distribütörlük kabul edebilir, hizmet acentelik, komisyonculuk sözleşmeleri ile şirketi amacına ulaşması için gereken diğer hukuki ilişkiler kurabilir."
+          },
+          {
+            "title": "Tender participation and bidding",
+            "route": "deneme6",
+            "content": "Konusu ile ilgili yurt içinde ve yurt dışında açılacak olan ihalelere katılabilir, artırım ve eksiltmelere girebilir, pey sürebilir, teminat akçesi yatabilir,taahhütlerde bulunabilir ihalenin kendi üstünde kalması halinde sözleşme yapabilir."
+          },
+          {
+            "title": "Exhibition participation",
+            "route": "deneme6",
+            "content": "Amaci ile ilgili olarak her türlü fuar, sergi ve panayırlara iştirak edebilir."
+          },
+          {
+            "title": "Carry out publicity and public relations activities",
+            "route": "deneme6",
+            "content": "Şirket, hizmetlerinin tanıtılması ile ilgili olarak her türü tanıtım ve halkla ilişkiler faaliyetlerini yürütebilir ya da aynı konuda üçüncü kişilere yetki verebilir."
+          },
+          {
+            "title": "Publication preparation",
+            "route": "deneme6",
+            "content": "Şirketin faaliyet konusuna ilişkin süreli veya süresiz her türlü basili veya dijital yayın hazırlamak, ...ve anasözleşmesinde yazılı olan diğer işler."
+          }
+        ]
+      }
+    ]
+  }
+}
