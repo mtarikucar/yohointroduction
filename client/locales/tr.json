@@ -20,7 +20,7 @@
   "navListMenu": {
     "sections": [
       {
-        "title": "selmas",
+        "title": "FinTech ve Hizmetler",
         "introduction": "Finansal teknoloji alanında, inovasyona ve hizmete odaklanan uzmanız; Bilim ve teknolojinin trendine öncülük eden, finans, sanal POS vb. gibi yenilikçi yazılımlar geliştiriyor;İlerlemenize yardımcı olacak medya akışı, mobil hizmetler ve kripto varlıkları gibi teknik uygulamalarımız ve ana teknolojilerimiz var; Kapsamlı hizmetlerimiz varlık işlemlerini, yenilikçi inşaatı, garanti desteğini, finansal işlem planlamasını ve iş inovasyonunu kapsar.",
         "items": [
           {
@@ -127,57 +127,57 @@
           {
             "title": "Bilgisayar ve elektronik sistemlerin satın alınması, satışı ve kiralanması",
             "route": "deneme5",
-            "content": "Bilgisayar alımında ve her türlü elektronik sistem, araç ve cihazlarda veya diğer teknolojik ortamlarda kullandırmak üzere her türlü yazılım, kod ve benze ürünleri geliştirmek ve kullandırmak,önceden üretilen bu nevi ürünlerin her türlü satış ve kiralama yapmak."
+            "content": "Bilgisayar ve diğer elektronik sistemlerin satışını, kiralamasını ve edinilmesini sağlamak, yazılım, kod ve benzeri ürünleri geliştirmek ve sunmak, önceden üretilen bu tür ürünleri satmak ve kiralamak."
           },
           {
             "title": "Bilgisayar ve yazılım eğitimi",
             "route": "deneme6",
-            "content": "Her türlü bilgisayar ve yazılım eğitimi vermek, bu konularla toplantılar, seminerler v eğitim faaliyetleri düzenlemek."
+            "content": "Her türlü bilgisayar ve yazılım eğitimi sağlamak, bu konularla ilgili toplantılar, seminerler ve eğitim etkinlikleri düzenlemek."
           },
           {
-            "title": "Network communication services and training",
+            "title": "Ağ iletişim hizmetleri ve eğitimi",
             "route": "deneme6",
-            "content": "Her türlü network iletişin hizmet ve eğitimlerini sağlamak, bunlarla ilgili olarak her türlü alt yapı araç gereç ve tesislerini kurmak, çalıştırmak, alışım, kiralanmasını ve kiraya verilmesini yapmak yazılımlarını yapmak."
+            "content": "Her türlü ağ iletişim hizmetlerini ve eğitimini sağlamak, bu konuyla ilgili altyapı, araç gereç ve tesisleri kurmak, işletmek, kiralamak ve kiraya vermek, yazılımları geliştirmek."
           },
           {
-            "title": "Hardware equipment provision and system analysis",
+            "title": "Donanım ekipmanı temini ve sistem analizi",
             "route": "deneme6",
-            "content": "Donanım sağlamak ve bu amaçla sistem analiz ve tasarımını yapmak,uygulamaları kontrol etmek, değişiklikler yapmak uygulama paketleri geliştirmek ve yazılımlarını yapmak,pazarlamak."
+            "content": "Donanım ekipmanı temin etmek ve bu amaçla sistem analizi ve tasarımını yapmak, uygulamaları denetlemek, değişiklikler yapmak, uygulama paketleri geliştirmek ve yazılım satmak."
           },
           {
-            "title": "Intellectual Property Acquisition and Transfer",
+            "title": "Fikri Mülkiyet İktisabı ve Devri",
             "route": "deneme6",
-            "content": "Yurt içinden veya yurt dışından patent, lisans, imtiyaz ticari marka,teknik yardım,knowhow, kullanım hakları, bilgisayar yazılımları ve diğer fikri ve sınai mülkiyet haklarını iktisap edebilir, bunları kiralayabilir, devir ve temlik edebilir."
+            "content": "Yerel veya yabancı patent, lisans, imtiyaz, ticari marka, teknik destek, knowhow, kullanım hakları, bilgisayar yazılımları ve diğer fikri ve sınai mülkiyet haklarını edinmek, kiralamak, devretmek ve devretmek."
           },
           {
-            "title": "Partnership establishment and exit",
+            "title": "Ortaklık Kurma ve Ayrılma",
             "route": "deneme6",
-            "content": "Yurt içinde ve yurt dışında mevcut başka gerçek ve tüzel kişilikler ile ortaklık kurabileceği gibi mevcut şirketlere ortak sıfatı ile katılabilir birleşebilir,gerekli gördüğü hallerde bu ortaklıklardan ayrılabilir,bunları fesih ve tasfiye edebilir. "
+            "content": "Yerel ve yabancı gerçek ve tüzel kişilerle ortaklık kurma, mevcut şirketlere ortak olarak katılma, birleşme, gerektiğinde bu ortaklıklardan ayrılma, sonlandırma ve tasfiye etme."
           },
           {
-            "title": "Establishment of representative offices and agents",
+            "title": "Temsilcilik ve Acente Kurma",
             "route": "deneme6",
-            "content": "Yurt içinde ve dışında temsilcilik, acentelik, şube verebilir, mümessillik, acentecilik distribütörlük kabul edebilir, hizmet acentelik, komisyonculuk sözleşmeleri ile şirketi amacına ulaşması için gereken diğer hukuki ilişkiler kurabilir."
+            "content": "Yerel ve yabancı temsilcilikler, acenteler, şubeler kurma, temsilcilik, acentelik, distribütörlük kabul etme, hizmet acentelikleri, komisyonculuk anlaşmaları ve şirketin amacına ulaşması için diğer yasal ilişkiler kurma."
           },
           {
-            "title": "Tender participation and bidding",
+            "title": "İhale Katılımı ve Teklif Verme",
             "route": "deneme6",
-            "content": "Konusu ile ilgili yurt içinde ve yurt dışında açılacak olan ihalelere katılabilir, artırım ve eksiltmelere girebilir, pey sürebilir, teminat akçesi yatabilir,taahhütlerde bulunabilir ihalenin kendi üstünde kalması halinde sözleşme yapabilir."
+            "content": "Konuyla ilgili yerel ve yabancı ihalelere katılma, artırma ve eksiltmelere katılma, teklif verme, teminat yatırma, taahhütlerde bulunma, ihale kendi üzerinde kalırsa sözleşme yapma."
           },
           {
-            "title": "Exhibition participation",
+            "title": "Fuar Katılımı",
             "route": "deneme6",
-            "content": "Amaci ile ilgili olarak her türlü fuar, sergi ve panayırlara iştirak edebilir."
+            "content": "Amacıyla her türlü fuar, sergi ve panayırlara katılma."
           },
           {
-            "title": "Carry out publicity and public relations activities",
+            "title": "Tanıtım ve Halkla İlişkiler Faaliyetleri Yürütme",
             "route": "deneme6",
-            "content": "Şirket, hizmetlerinin tanıtılması ile ilgili olarak her türü tanıtım ve halkla ilişkiler faaliyetlerini yürütebilir ya da aynı konuda üçüncü kişilere yetki verebilir."
+            "content": "Şirketin hizmetlerini tanıtmak için her türlü tanıtım ve halkla ilişkiler faaliyetlerini yürütme veya aynı konuda üçüncü kişilere yetki verme."
           },
           {
-            "title": "Publication preparation",
+            "title": "Yayın Hazırlama",
             "route": "deneme6",
-            "content": "Şirketin faaliyet konusuna ilişkin süreli veya süresiz her türlü basili veya dijital yayın hazırlamak, ...ve anasözleşmesinde yazılı olan diğer işler."
+            "content": "Şirketin faaliyet konusuyla ilgili her türlü basılı veya dijital yayın hazırlama... ve ana sözleşmede yazılı diğer işler."
           }
         ]
       }

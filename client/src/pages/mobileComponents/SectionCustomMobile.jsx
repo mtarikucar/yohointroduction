@@ -119,7 +119,7 @@ function DialogDefault({ title, content, open, onClose }) {
     return (
         <>
             <Dialog open={open} handler={onClose} className="bg-[#0085FF]">
-                <DialogHeader className="text-white">{title}</DialogHeader>
+                <DialogHeader className="text-white text-center">{title}</DialogHeader>
                 <DialogBody className="text-white">
                     {content}
                 </DialogBody>

@@ -70,7 +70,7 @@ export default function NavListMenu() {
                                 <MenuItem
                                     key={menuItemTitle}
                                     onClick={() => setOpenedMenuIndex(null)}
-                                    className={`flex items-center gap-2 rounded ${activeHash === `#${route}` ? 'underline' : ''}`}
+                                    className={`flex items-center gap-2 rounded ${activeHash === `#${title}` ? 'underline' : ''}`}
                                 >
 
                                     <Typography

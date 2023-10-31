@@ -47,7 +47,7 @@ function Home() {
                 <Typography
                   variant="lead"
                   color="white"
-                  className="mb-12 opacity-80"
+                  className="mb-12 opacity-80 text-base"
                 >
                   {isExpanded ? text : (text.length > 200 ? text.substring(0, 200) + '...' : text)}
                   {text.length > 200 && !isExpanded && (

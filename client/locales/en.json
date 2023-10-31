@@ -2,7 +2,7 @@
   "carousel": {
     "slide1": {
       "title": "About Us",
-      "description": "The company operates in the procurement, sale, and leasing of computer and electronic systems, software development, hardware equipment supply and system analysis, project management and consulting, computer and software training, network communication services and training, information and communication consultancy and brokerage services. and software development and presentation, integrated software production and development, software consultancy, and services. Additionally, the company deals in movable and immovable property transactions, collateral and mortgage registration, protection of receivables and debts, warranties and guarantees, securities transactions, acquisition and transfer of intellectual property rights, obtaining domestic and foreign loans, leaving institutions and partnerships, purchasing equipment, importing and exporting, establishing agencies and representatives, participating in tenders and bids, attending exhibitions, participating in commercial activities, developing public relations and preparing publications."
+      "description": "The company is engaged in activities related to the purchase, sale, and leasing of computer and electronic systems, software development, hardware equipment procurement and system analysis, project management and consulting, computer and software training, network communication services and training, information and communication consulting, and brokerage services. It also deals with movable and immovable property transactions, collateral and mortgage registration, protection of receivables and debts, guarantees and warranties, securities transactions, acquisition and transfer of intellectual property rights, obtaining domestic and foreign credits, establishment and exit from partnerships, acquisition of vehicles and equipment, import and export, establishment of representatives and agents, participation in tenders and auctions, participation in exhibitions, and development of promotional and public relations activities and publications."
     },
     "slide2": {
       "title": "Slide 2 Title",
@@ -20,70 +20,164 @@
   "navListMenu": {
     "sections": [
       {
-        "title": "Selmas",
-        "introduction": "We specialize in financial technology, focusing on innovation and service; leading the trend of science and technology, developing innovative software such as finance, virtual POS, etc.; We have technical applications and core technologies like media flow, mobile services, and crypto assets; Our comprehensive services cover asset transactions, innovative construction, guarantee support, financial transaction planning, and business innovation.",
+        "title": "FinTech and Services",
+        "introduction": "In the field of financial technology, we specialize in innovation and service; we develop innovative software for finance, virtual POS, and more; our technical applications and core technologies include media streaming, mobile services, and cryptocurrency assets; our comprehensive services encompass asset transactions, innovative construction, warranty support, financial transaction planning, and business innovation.",
         "items": [
           {
             "title": "Software Development",
             "route": "software",
-            "content": "Any kind of financial service software, banking software, international money transfer software, virtual POS systems and software, collection systems and software, payment system software, stock market and finance software and training software, streaming services, mobile services, cryptocurrency and crypto asset projects, blockchain projects and mobile finance services and custom software projects."
+            "content": "We develop custom software for various financial services, banking software, international money transfer software, virtual POS systems, collection systems, payment systems, stock and finance software, and educational software for finance, as well as streaming services, mobile services, cryptocurrency and crypto asset projects, blockchain projects, and project-specific software."
           },
           {
-            "title": "Warranties and Guarantees",
-            "route": "deneme1",
-            "content": "It can deal with the following matters to realize the company purpose and subject. It can acquire movable and immovable properties, buy, sell, rent by ordinary rent or financial leasing, lease out, manage, construct any kind of building, facility or similar construction on the immovable properties it owns or rents, or have them built by third parties."
+            "title": "Guarantees and Collateral",
+            "route": "trial1",
+            "content": "To achieve the company's objectives and purposes, we can engage in activities related to the acquisition, purchase, sale, leasing through ordinary lease and financial leasing, and all kinds of management of movable and immovable properties, as well as construction, facilities, and similar construction on the real estates we own or lease, whether directly or through third parties."
           },
           {
-            "title": "Movable and Immovable Management",
-            "route": "deneme2",
-            "content": "The company can show its movable and immovable properties as collateral in favor of the company or third parties. For this purpose, it can register and establish pledges and mortgages on the said properties."
+            "title": "Management of Movable and Immovable Property",
+            "route": "trial2",
+            "content": "The company can establish security interests and mortgages on its movable and immovable properties in favor of the company or third parties. For this purpose, it can register and record these properties with security and mortgages."
           },
           {
             "title": "Collateral and Mortgage Registration",
-            "route": "deneme4",
-            "content": "The company can give and take mortgages and pledges of all kinds, forms, and ranks to secure its receivables and debts. It can register, transfer and assign them; it can cancel and modify the existing and to be established mortgages and pledges."
+            "route": "trial4",
+            "content": "The company can provide and receive all kinds, forms, and types of mortgages and liens to secure its receivables and debts. It can register, transfer, and assign these mortgages and liens and modify and amend existing and future mortgages and liens."
           },
           {
             "title": "Protection of Receivables and Debts",
-            "route": "deneme3",
-            "content": "The company can give guarantees, assurances in favor of the company and third parties, or commit as joint debtor and joint and several guarantor."
+            "route": "trial3",
+            "content": "The company can provide guarantees, sureties, and warranties for itself and third parties or undertake obligations as a joint and several guarantor in favor of others."
           },
           {
             "title": "Protection of Receivables and Debts",
-            "route": "deneme3",
-            "content": "Without being involved in securities brokerage activities, it can buy, sell securities such as shares, bonds, profit-sharing papers, benefit from usufruct rights, establish usufruct rights, and enter into all kinds of transactions related to securities, carry out all kinds of commercial, industrial, and financial transactions."
+            "route": "trial3",
+            "content": "As long as it does not engage in securities brokerage activities, the company can buy, sell, provide collateral for, establish rights of usufruct, and engage in all kinds of commercial, industrial, and financial transactions related to securities such as stocks, bonds, dividend certificates, profit-sharing certificates, and carry out any kind of transactions related to securities."
           }
         ]
       },
       {
-        "title": "Import, Export and International Trade",
-        "introduction": "We conduct domestic and international trade activities, import, export, and leasing operations.",
+        "title": "Import, Export, and International Trade",
+        "introduction": "We carry out domestic and international trade activities, import, export, and leasing operations.",
         "items": [
           {
             "title": "Trade Activities",
-            "route": "deneme5",
-            "content": "Can participate in domestic and foreign (import or export) trade activities."
+            "route": "trial5",
+            "content": "We can participate in domestic and international trade activities, including import and export."
           },
           {
             "title": "Purchase, Import, and Export of Vehicles and Equipment",
-            "route": "deneme6",
-            "content": "To be able to do the tasks within the scope of the company, any means, vehicles, machines, equipment, electronic or electronic devices, hardware can be purchased, leased, imported, and exported."
+            "route": "trial6",
+            "content": "The company can acquire, purchase, lease, and import or export all kinds of vehicles, equipment, machinery, installations, electrical or electronic devices, hardware, software, codes, and similar products for use in technological environments and make sales and leasing of such products."
           }
         ]
       },
       {
-        "title": "Soc Media",
-        "introduction": "We engage in various social media activities and offer comprehensive services in this area.",
+        "title": "Credit Operations",
+        "introduction": "We can provide short-term, medium-term, and long-term domestic and foreign credits.",
         "items": [
           {
-            "title": "Attending Exhibitions",
-            "route": "deneme8",
-            "content": "We can participate in exhibitions."
+            "title": "Trade Activities",
+            "route": "trial5",
+            "content": "We can obtain and use short, medium, and long-term domestic and foreign credits from Turkish and foreign banks or other financial institutions."
+          }
+         
+        ]
+      },
+      {
+        "title": "Software Development",
+        "introduction": "We focus on computer software development, web design, and provide various software production for multimedia products, advertising, e-commerce, and computer hardware integration.",
+        "items": [
+          {
+            "title": "Software Development and Presentation",
+            "route": "trial5",
+            "content": "We produce and present all kinds of computer software, web design, multimedia products such as animation and simulation, intermediary services, advertising and promotion services, e-commerce, buying, selling, and marketing."
           },
           {
-            "title": "Participating in Commercial Activities",
-            "route": "deneme7",
-            "content": "Can be involved in commercial activities."
+            "title": "Software Integration, Development, and Deployment",
+            "route": "trial6",
+            "content": "We produce, develop, process, reproduce, and distribute all kinds of software, including software integrated into all types of computer hardware, operating systems, application software, database software, productivity-enhancing software, multimedia software, and other software, and distribute them in all kinds of physical and electronic media."
+          }
+        ]
+      },
+      {
+        "title": "Management and Consulting",
+        "introduction": "We provide software project management and consulting, development, database analysis, and related services.",
+        "items": [
+          {
+            "title": "Project Management and Consulting",
+            "route": "trial5",
+            "content": "We provide software development project management and consulting services."
+          },
+          {
+            "title": "Information and Communication Consulting and Brokerage Services",
+            "route": "trial6",
+            "content": "We provide consulting and brokerage services in information and communication."
+          },
+          {
+            "title": "Software Consulting and Services",
+            "route": "trial6",
+            "content": "We provide all kinds of software consulting, development, database consulting, project analysis, and software services."
+          }
+        ]
+      },
+      {
+        "title": "Other Businesses",
+        "introduction": "We provide computer and electronic system applications, develop and sell software and hardware equipment, organize training and conferences, and provide network communication services.",
+        "items": [
+          {
+            "title": "Purchase, Sale, and Leasing of Computer and Electronic Systems",
+            "route": "trial5",
+            "content": "We develop and provide all kinds of software, codes, and similar products for computer and electronic system acquisition and use, and make sales and leasing of such pre-produced products."
+          },
+          {
+            "title": "Computer and Software Training",
+            "route": "trial6",
+            "content": "We provide all kinds of computer and software training, organize meetings, seminars, and training activities on these topics."
+          },
+          {
+            "title": "Network Communication Services and Training",
+            "route": "trial6",
+            "content": "We provide all kinds of network communication services and training, establish and operate all kinds of infrastructure, tools, and facilities related to them, lease or rent them, and develop software for them."
+          },
+          {
+            "title": "Hardware Equipment Provision and System Analysis",
+            "route": "trial6",
+            "content": "We provide hardware and perform system analysis and design for this purpose, control applications, make changes, develop application packages, and market software."
+          },
+          {
+            "title": "Intellectual Property Acquisition and Transfer",
+            "route": "trial6",
+            "content": "We can acquire patents, licenses, privileges, trademarks, technical assistance, know-how, user rights, computer software, and other intellectual and industrial property rights from domestic or foreign sources, lease them, and transfer them."
+          },
+          {
+            "title": "Partnership Establishment and Exit",
+            "route": "trial6",
+            "content": "Both domestically and internationally, we can establish partnerships with other natural and legal persons and participate as a partner in existing companies, merge with them, if deemed necessary, separate from these partnerships, and terminate them."
+          },
+          {
+            "title": "Establishment of Representative Offices and Agents",
+            "route": "trial6",
+            "content": "Domestically and abroad, we can establish representative offices, agencies, branches, appoint agents, accept services, act as agents, commission agents, and establish other legal relationships necessary for the company's objectives."
+          },
+          {
+            "title": "Tender Participation and Bidding",
+            "route": "trial6",
+            "content": "We can participate in tenders and auctions opened both domestically and internationally, enter into bids, make bids, deposit bid bonds, undertake obligations, and enter into contracts if the tender is awarded to us."
+          },
+          {
+            "title": "Exhibition Participation",
+            "route": "trial6",
+            "content": "For the purpose of its activities, the company can participate in all kinds of fairs, exhibitions, and trade fairs."
+          },
+          {
+            "title": "Carry Out Publicity and Public Relations Activities",
+            "route": "trial6",
+            "content": "The company can carry out all types of publicity and public relations activities related to the promotion of its services or authorize third parties to do the same."
+          },
+          {
+            "title": "Publication Preparation",
+            "route": "trial6",
+            "content": "The company can prepare periodical or non-periodical printed or digital publications related to its field of activity and other activities specified in its articles of association."
           }
         ]
       }

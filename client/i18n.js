@@ -2,13 +2,13 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import tr from './locales/tr.json';
-import cn from './locales/zh.json';
+import zh from './locales/zh.json';
 import en from './locales/en.json'
 
 const resources = {
   en: { translation: en },
   tr: { translation: tr },
-  cn: { translation: cn }
+  zh: { translation: zh }
 };
 
 

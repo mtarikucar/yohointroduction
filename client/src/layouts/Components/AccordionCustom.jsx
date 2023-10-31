@@ -53,7 +53,7 @@ export function AccordionCustom() {
           </AccordionHeader>
           <AccordionBody>
             {items.map(({ title: itemTitle, route }) => (<>
-              <a key={itemTitle} href={`#${title}`} className={`ml-3 my-2 block ${activeHash === `#${route}` ? 'underline' : ''}`}>
+              <a key={itemTitle} href={`#${title}`} className={`ml-3 my-2 block ${activeHash === `#${title}` ? 'underline' : ''}`}>
                 {itemTitle}
               </a>
               <hr />

@@ -55,15 +55,15 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
     }
 
     return (
-        <div className="col-span-3   ">
+        <div className="col-span-3">
             <div className='p-10 h-full overflow-x-auto relative no-scrollbar'>
-
-                <div className="flex space-x-4 ml-auto items-center h-full">
+                <div className="flex space-x-4 ml-auto items-center h-full border-b-4 border-gray-400 pb-4">
+                     
                     {items.map((_, i) => (
                         <Card
                             key={i}
                             ref={cardRefs[i]}
-                            number={i > 8 ? `${i + 1}`: `0${i + 1}`}
+                            number={i > 8 ? `${i + 1}` : `0${i + 1}`}
                             title={_.title}
                             content={_.content}
                             img={`../image_f${index + 1}_small_0${i + 1}.png`}
@@ -73,9 +73,6 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
                         />
                     ))}
                 </div>
-            </div>
-            <div className="w-full h-1 bg-white">
-                <div style={{ width: `${(selectedCard + 1) * 16.6666}%` }} className="h- bg-blue-500"></div>
             </div>
         </div>
     );
