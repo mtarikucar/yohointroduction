@@ -5,9 +5,10 @@ import { motion, useAnimation } from 'framer-motion';
 
 function LeftSection({ introduction, title }) {
     const textVariants = {
-        hidden: { y: '-100vh', opacity: 0.8 },
+        hidden: { y: '-40vh', opacity: 0.8 },
         visible: { y: 0, opacity: 1, transition: { duration: 1.5 } }
     };
+
     return (
         <div className="col-span-2 relative bg-gray-200">
 
@@ -34,7 +35,7 @@ function LeftSection({ introduction, title }) {
     );
 }
 
-function RightSection({ selectedCard, setSelectedCard, items ,index}) {
+function RightSection({ selectedCard, setSelectedCard, items, index }) {
     const cardRefs = useRef(items.map(() => createRef()));
 
     useEffect(() => {
@@ -52,7 +53,7 @@ function RightSection({ selectedCard, setSelectedCard, items ,index}) {
             behavior: 'smooth'
         });
     }
-    
+
     return (
         <div className="col-span-3   ">
             <div className='p-10 h-full overflow-x-auto relative no-scrollbar'>
@@ -62,12 +63,13 @@ function RightSection({ selectedCard, setSelectedCard, items ,index}) {
                         <Card
                             key={i}
                             ref={cardRefs[i]}
-                            number={`0${i + 1}`}
+                            number={i > 8 ? `${i + 1}`: `0${i + 1}`}
                             title={_.title}
                             content={_.content}
                             img={`../image_f${index + 1}_small_0${i + 1}.png`}
                             isSelected={selectedCard === i}
                             onSelect={() => handleSelectCard(i)}
+                            delayMultiplier={i}
                         />
                     ))}
                 </div>
@@ -79,10 +81,18 @@ function RightSection({ selectedCard, setSelectedCard, items ,index}) {
     );
 }
 
-const Card = forwardRef(({ number, title, img, isSelected, onSelect,content }, ref) => {
+const Card = forwardRef(({ number, title, img, isSelected, onSelect, content, delayMultiplier = 0 }, ref) => {
+    const cardVariants = {
+        hidden: { x: '10vh', opacity: 0 },
+        visible: { x: 0, opacity: 1, transition: { duration: 0.5 } }
+    };
     return (
-        <div 
-            className={`relative flex-shrink-0 ${isSelected ? `w-[54%] bg-blue-500` : `w-[27%]`} ease-in-out duration-300`} 
+        <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.3 * delayMultiplier }}
+            variants={cardVariants}
+            className={`relative flex-shrink-0 ${isSelected ? `w-[54%] bg-blue-500` : `w-[27%]`} ease-in-out duration-300`}
             ref={ref}
         >
             <img src={img} alt={title} className="h-full w-full object-cover max-h-[50vh]" />
@@ -99,7 +109,7 @@ const Card = forwardRef(({ number, title, img, isSelected, onSelect,content }, r
                         : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={onSelect}>Click Me</button>
                 }
             </div>
-        </div>
+        </motion.div>
     );
 });
 
@@ -150,7 +160,7 @@ function SectionCustom({ items, introduction, title, index }) {
             className='grid grid-cols-5 h-[100vh] bg-[#07051D]'
         >
             <LeftSection introduction={introduction} title={title} />
-            <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items} index={index}/>
+            <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items} index={index} />
         </motion.div>
     )
 }

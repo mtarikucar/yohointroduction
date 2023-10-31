@@ -1,40 +1,44 @@
-import { Typography } from '@material-tailwind/react';
+import {
+    Button,
+    Dialog,
+    DialogHeader,
+    DialogBody,
+    DialogFooter,
+    Typography
+} from "@material-tailwind/react";
 import { useEffect, useRef, createRef, forwardRef, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion';
 
 
 function LeftSection({ introduction, title }) {
     const textVariants = {
-        hidden: { y: '-100vh', opacity: 0.8 },
+        hidden: { y: '-20vh', opacity: 0.8 },
         visible: { y: 0, opacity: 1, transition: { duration: 1.5 } }
     };
     return (
-        <div className="col-span-2 relative bg-gray-200">
-
-            <img src="../image_f1_big.png" alt="Description" className="h-full w-full object-cover" />
-            <div className='absolute inset-0 grid h-full w-full items-center'>
-                <motion.div variants={textVariants} className='p-10'>
-                    <Typography
-                        variant="h1"
-                        color="white"
-                        className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-                    >
-                        {title}
-                    </Typography>
-                    <Typography
-                        variant="lead"
-                        color="white"
-                        className="mb-12 opacity-80"
-                    >
-                        {introduction}
-                    </Typography>
-                </motion.div>
-            </div>
+        <div className=' items-center'>
+            <motion.div variants={textVariants} className='p-10'>
+                <Typography
+                    as={"span"}
+                    variant="lead"
+                    color="white"
+                    className="mb-4  border-b-2 border-solid border-white"
+                >
+                    {title}
+                </Typography>
+                <Typography
+                    variant="paragraph"
+                    color="white"
+                    className="mb-12 opacity-80"
+                >
+                    {introduction}
+                </Typography>
+            </motion.div>
         </div>
     );
 }
 
-function RightSection({ selectedCard, setSelectedCard, items ,index}) {
+function RightSection({ selectedCard, setSelectedCard, items, index }) {
     const cardRefs = useRef(items.map(() => createRef()));
 
     useEffect(() => {
@@ -42,6 +46,7 @@ function RightSection({ selectedCard, setSelectedCard, items ,index}) {
     }, [items]);
 
     const handleSelectCard = (index) => {
+        console.log(index);
         setSelectedCard(index);
         const scrollContainer = cardRefs[index].current.parentNode;
         const cardStart = cardRefs[index].current.offsetLeft;
@@ -52,59 +57,79 @@ function RightSection({ selectedCard, setSelectedCard, items ,index}) {
             behavior: 'smooth'
         });
     }
-    
-    return (
-        <div className="col-span-3   ">
-            <div className='p-10 h-full overflow-x-auto relative no-scrollbar'>
 
-                <div className="flex space-x-4 ml-auto items-center h-full">
+    return (
+        <div className=" ">
+            <div className='px-10 mb-10  no-scrollbar'>
+
+                <div className="grid grid-cols-2 gap-4  ml-auto items-center ">
                     {items.map((_, i) => (
                         <Card
                             key={i}
                             ref={cardRefs[i]}
-                            number={`0${i + 1}`}
+                            number={i > 8 ? `${i + 1}`: `0${i + 1}`}
                             title={_.title}
                             content={_.content}
-                            img={`../image_f${index + 1}_small_0${i + 1}.png`}
+                            img={`../h5_f${index + 1}_small0${i + 1}.png`}
                             isSelected={selectedCard === i}
                             onSelect={() => handleSelectCard(i)}
                         />
                     ))}
                 </div>
             </div>
-            <div className="w-full h-1 bg-white">
-                <div style={{ width: `${(selectedCard + 1) * 16.6666}%` }} className="h- bg-blue-500"></div>
-            </div>
+            
         </div>
     );
 }
 
-const Card = forwardRef(({ number, title, img, isSelected, onSelect,content }, ref) => {
+const Card = forwardRef(({ number, title, img, isSelected, onSelect, content }, ref) => {
+    const [isDialogOpen, setDialogOpen] = useState(false);
+
+    const handleDialogOpen = () => {
+        setDialogOpen(true);
+    };
+
+    const handleDialogClose = () => {
+        setDialogOpen(false);
+    };
+
     return (
-        <div 
-            className={`relative flex-shrink-0 ${isSelected ? `w-[54%] bg-blue-500` : `w-[27%]`} ease-in-out duration-300`} 
+        <div
+            className={`relative ease-in-out duration-300`}
             ref={ref}
         >
             <img src={img} alt={title} className="h-full w-full object-cover max-h-[50vh]" />
 
             <div className='absolute inset-0 grid h-full w-full items-center text-white p-6'>
                 <div>
-                    <span className="text-2xl border-b-2 border-solid border-white mb-2">{number}</span>
-                    <p className='mt-2'>{title}</p>
+                    <span className="text-sm border-b-2 border-solid border-white mb-2">{number}</span>
+                    <p className='text-sm'>{title}</p>
                 </div>
 
-                {
-                    isSelected
-                        ? <p className="mt-4">{content}</p>
-                        : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={onSelect}>Click Me</button>
-                }
+                <button className="bottom-0 mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={handleDialogOpen}>Click Me</button>
+
+                {isDialogOpen && <DialogDefault title={title} content={content} open={isDialogOpen} onClose={handleDialogClose} />}
             </div>
         </div>
     );
 });
 
 
-function SectionCustom({ items, introduction, title, index }) {
+function DialogDefault({ title, content, open, onClose }) {
+    return (
+        <>
+            <Dialog open={open} handler={onClose} className="bg-[#0085FF]">
+                <DialogHeader className="text-white">{title}</DialogHeader>
+                <DialogBody className="text-white">
+                    {content}
+                </DialogBody>
+            </Dialog>
+        </>
+    );
+}
+
+
+function SectionCustomMobile({ items, introduction, title, index }) {
     const [selectedCard, setSelectedCard] = useState(null);
     const controls = useAnimation();
     const sectionRef = useRef(null);
@@ -147,12 +172,14 @@ function SectionCustom({ items, introduction, title, index }) {
             initial="hidden"
             animate={controls}
             variants={variants}
-            className='grid grid-cols-5 h-[100vh] bg-[#07051D]'
+            className='h-fit bg-[#07051D] my-2'
         >
+
             <LeftSection introduction={introduction} title={title} />
-            <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items} index={index}/>
+            <RightSection introduction={introduction} title={title} index={index} items={items} />
+
         </motion.div>
     )
 }
 
-export default SectionCustom
+export default SectionCustomMobile
