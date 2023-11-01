@@ -24,7 +24,7 @@ export default function DrawerCustom({ open, setOpen }) {
             >
                 <div className="overflow-y-scroll h-screen">
 
-                    <AccordionCustom />
+                    <AccordionCustom closeDrawer={closeDrawer} />
                 </div>
             </Drawer>
 

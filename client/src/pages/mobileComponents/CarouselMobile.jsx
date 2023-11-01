@@ -11,7 +11,7 @@ export default function CarouselMobile(props) {
 
     return (<>
 
-        <div className='px-12  h-36 sm:h-64 md:h-96 rounded-sm'>
+        <div className='px-10  h-36 sm:h-64 md:h-96 rounded-sm'>
 
             <CarouselCustom setLockScroll={props.setLockScroll}>
 

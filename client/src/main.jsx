@@ -16,16 +16,19 @@ import '../i18n';
 
 
 import { ThemeProvider } from "@material-tailwind/react";
+import { LanguageInitializer } from "./hooks/LanguageInitializer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
     <Router>
       <Provider store={store}>
-        <ThemeProvider>
-          <PersistGate loading={null} persistor={persistor}>
+        <LanguageInitializer>
+          <ThemeProvider>
+            <PersistGate loading={null} persistor={persistor}>
               <App />
-          </PersistGate>
-        </ThemeProvider>
+            </PersistGate>
+          </ThemeProvider>
+        </LanguageInitializer>
       </Provider>
     </Router>
   </>

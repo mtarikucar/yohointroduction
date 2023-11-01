@@ -22,7 +22,7 @@ function Icon({ isOpen }) {
   );
 }
 
-export function AccordionCustom() {
+export function AccordionCustom({ closeDrawer }) {
   const [openIndex, setOpenIndex] = React.useState(null);
   const [activeHash, setActiveHash] = React.useState(window.location.hash);
   const { t } = useTranslation();
@@ -41,6 +41,7 @@ export function AccordionCustom() {
     };
   }, []);
 
+
   return (
     <>
       {accordionItems.map(({ title, items }, idx) => (
@@ -53,7 +54,7 @@ export function AccordionCustom() {
           </AccordionHeader>
           <AccordionBody>
             {items.map(({ title: itemTitle, route }) => (<>
-              <a key={itemTitle} href={`#${title}`} className={`ml-3 my-2 block ${activeHash === `#${title}` ? 'underline' : ''}`}>
+              <a key={itemTitle} href={`#${title}`} className={`ml-3 my-2 block ${activeHash === `#${title}` ? 'underline' : ''}`} onClick={() => closeDrawer()}>
                 {itemTitle}
               </a>
               <hr />

@@ -56,9 +56,9 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
 
     return (
         <div className="col-span-3">
-            <div className='p-10 h-full overflow-x-auto relative no-scrollbar'>
-                <div className="flex space-x-4 ml-auto items-center h-full border-b-4 border-gray-400 pb-4">
+            <div className='p-10 h-full overflow-x-auto relative no-scrollbar snap-x snap-mandatory'>
                      
+                <div className="flex space-x-4 ml-auto items-center h-full ">
                     {items.map((_, i) => (
                         <Card
                             key={i}
@@ -89,7 +89,7 @@ const Card = forwardRef(({ number, title, img, isSelected, onSelect, content, de
             animate="visible"
             transition={{ delay: 0.3 * delayMultiplier }}
             variants={cardVariants}
-            className={`relative flex-shrink-0 ${isSelected ? `w-[54%] bg-blue-500` : `w-[27%]`} ease-in-out duration-300`}
+            className={`relative flex-shrink-0 ${isSelected ? `w-[54%] bg-blue-500` : `w-[27%]`} ease-in-out duration-300 snap-center`}
             ref={ref}
         >
             <img src={img} alt={title} className="h-full w-full object-cover max-h-[50vh]" />

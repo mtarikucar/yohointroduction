@@ -23,19 +23,19 @@ function Home() {
           </div>
           {navListMenuItems.map(({ title, items, introduction }, i) => (
             <div id={title} className=" snap-center min-h-screen">
-              <SectionCustom items={items} introduction={introduction} title={title} index={i} />
+              <SectionCustom items={items} introduction={introduction} title={title} index={i}  setLockScroll={setLockScroll}/>
             </div>
           ))}
         </div>
       </div>
       <div className={`h-full w-full overflow-y-scroll  no-scrollbar scroll-smooth md:hidden bg-[#07051D]`}>
         <div className=" h-fit bg-[#07051D]">
-          <Typography color="white" className="p-12 font-medium text-3xl  break-keep" >
+          <Typography color="white" className="p-10 font-medium text-3xl  break-keep" >
             YOHO金融技术 股份有限公司
           </Typography>
           <CarouselMobile />
           <div className=" grid mt-10 w-full items-center ">
-            <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
+            <div className="w-3/4 px-10">
               <div >
                 <Typography
                   variant="h1"
