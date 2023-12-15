@@ -16,7 +16,7 @@ import '../i18n';
 
 
 import { ThemeProvider } from "@material-tailwind/react";
-import { LanguageInitializer } from "./hooks/LanguageInitializer";
+import {LanguageInitializer} from "./hooks/Languageinitializer.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
