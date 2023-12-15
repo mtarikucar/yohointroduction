@@ -17,6 +17,7 @@
       "description": "Slide 4 açıklaması."
     }
   },
+  "click" : "Tıkla",
   "footer": "YOHO FİNANSAL TEKNOLOJİLER ANONİM ŞİRKETİ, Tüm hakları sakldıdır",
   "navListMenu": {
     "sections": [
@@ -77,11 +78,11 @@
         "introduction" : "Kısa vadeli, orta vadeli ve uzun vadeli yurt içi ve yurt dışı krediler yapabiliyoruz.",
         "items": [
           {
-            "title": "ticaret faaliyetleri",
+            "title": "",
             "route": "deneme5",
             "content": "Türk ve yabancı bankalardan veya diğer finans kuruluşlarına kısa, orta, uzun vadeli i ve diş kaynaklı kredi temin edebilir, kullanabilir."
           }
-         
+
         ]
       },
       {

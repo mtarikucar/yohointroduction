@@ -17,6 +17,7 @@
       "description": "Slide 4 description."
     }
   },
+  "click" : "click me",
   "footer": "YOHO Financial Technology Co., Ltd. All rights reserved",
   "navListMenu": {
     "sections": [
@@ -73,7 +74,7 @@
         ]
       },
       {
-        "title": "Credit Operations",
+        "title": "",
         "introduction": "We can provide short-term, medium-term, and long-term domestic and foreign credits.",
         "items": [
           {
@@ -81,7 +82,7 @@
             "route": "trial5",
             "content": "We can obtain and use short, medium, and long-term domestic and foreign credits from Turkish and foreign banks or other financial institutions."
           }
-         
+
         ]
       },
       {

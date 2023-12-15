@@ -8,6 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { useEffect, useRef, createRef, forwardRef, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion';
+import {useTranslation} from "react-i18next";
 
 
 function LeftSection({ introduction, title }) {
@@ -77,14 +78,14 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
                     ))}
                 </div>
             </div>
-            
+
         </div>
     );
 }
 
 const Card = forwardRef(({ number, title, img, isSelected, onSelect, content }, ref) => {
     const [isDialogOpen, setDialogOpen] = useState(false);
-
+    const { t } = useTranslation();
     const handleDialogOpen = () => {
         setDialogOpen(true);
     };
@@ -106,7 +107,7 @@ const Card = forwardRef(({ number, title, img, isSelected, onSelect, content }, 
                     <p className='text-sm'>{title}</p>
                 </div>
 
-                <button className="bottom-0 mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={handleDialogOpen}>Click Me</button>
+                <button className="bottom-0 mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={handleDialogOpen}>{t("click")}</button>
 
                 {isDialogOpen && <DialogDefault title={title} content={content} open={isDialogOpen} onClose={handleDialogClose} />}
             </div>

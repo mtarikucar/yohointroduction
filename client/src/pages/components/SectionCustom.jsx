@@ -1,6 +1,7 @@
 import { Typography } from '@material-tailwind/react';
 import { useEffect, useRef, createRef, forwardRef, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion';
+import {useTranslation} from "react-i18next";
 
 
 function LeftSection({ introduction, title }) {
@@ -57,7 +58,7 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
     return (
         <div className="col-span-3">
             <div className='p-10 h-full overflow-x-auto relative no-scrollbar snap-x snap-mandatory'>
-                     
+
                 <div className="flex space-x-4 ml-auto items-center h-full ">
                     {items.map((_, i) => (
                         <Card
@@ -83,6 +84,7 @@ const Card = forwardRef(({ number, title, img, isSelected, onSelect, content, de
         hidden: { x: '10vh', opacity: 0 },
         visible: { x: 0, opacity: 1, transition: { duration: 0.5 } }
     };
+    const {t} = useTranslation()
     return (
         <motion.div
             initial="hidden"
@@ -103,7 +105,7 @@ const Card = forwardRef(({ number, title, img, isSelected, onSelect, content, de
                 {
                     isSelected
                         ? <p className="mt-4">{content}</p>
-                        : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={onSelect}>Click Me</button>
+                        : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={onSelect}>{t("click")}</button>
                 }
             </div>
         </motion.div>

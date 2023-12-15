@@ -4,8 +4,8 @@ export default function FooterCustom() {
   const {t} = useTranslation();
   return (
     <footer className="sticky flex w-full items-center justify-start  bg-[#060417] h-[10vh]">
-      <Typography color="blue-gray" className=" text-white  w-full  font-thin p-4">
-        &copy; {t('footer')}
+      <Typography color="blue-gray" className=" text-white  w-full p-4 ">
+        &copy; YOHO Financial Technology Co., Ltd. All rights reserved
       </Typography>
     </footer>
   );
