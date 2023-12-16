@@ -1,15 +1,14 @@
-import React from 'react';
-import {Typography, Button} from "@material-tailwind/react";
-import {ChevronDownIcon} from "@heroicons/react/24/solid";
+
+import { Button} from "@material-tailwind/react";
 import {useDispatch, useSelector} from 'react-redux';
 import {setLanguage} from "../../../store/LanguageSlice";
 import i18n from 'i18next';
 
 const LanguageItems = [
-    {label: "Türkçe", code: "tr"},
-    {label: "English", code: "en"},
-    {label: "繁體中文", code: "zh"},
-    // { label: "简体中文", code: "zh" },
+    { label: "Türkçe", code: "tr" },
+    { label: "English", code: "en" },
+    { label: "繁體中文", code: "zh-cn" },
+    { label: "简体中文", code: "zh-hant" },
 ];
 
 export default function LanguageMenuHorizantal() {
@@ -22,18 +21,19 @@ export default function LanguageMenuHorizantal() {
     };
 
     return (
-        <div className="flex items-center gap-4">
+        <div className="grid grid-cols-4">
             {LanguageItems.map(({label, code}, index) => (
-                <>
-                    <Button
+                <span className={"flex items-center justify-center"}>
+                    <div
                         key={code}
                         onClick={() => handleLanguageChange(code)}
                         variant="text"
                         color={"gray"}
-                        className={`py-2 px-4 ${currentLanguage === code ? "font-bold" : ""}`}
+                        className={`text-sm mr-2 ${currentLanguage === code ? "font-bold" : "font-thin"}`}
+                        style={{fontSize:"0.8rem"}}
                     >
                         {label}
-                    </Button>
+                    </div>
                     {index != LanguageItems.length -1 && (
 
                         < span>
@@ -41,7 +41,7 @@ export default function LanguageMenuHorizantal() {
                         </span>
                     )
                     }
-                </>
+                </span>
             ))}
 
         </div>

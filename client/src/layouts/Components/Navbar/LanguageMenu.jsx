@@ -19,8 +19,8 @@ import i18n from 'i18next';
 const LanguageItems = [
   { label: "Türkçe", code: "tr" },
   { label: "English", code: "en" },
-  { label: "繁體中文", code: "zh" },
-  /* { label: "简体中文", code: "zh" }, */
+  { label: "繁體中文", code: "zh-cn" },
+   { label: "简体中文", code: "zh-hant" },
 ];
 
 
@@ -46,12 +46,12 @@ export default function LanguageMenu() {
           color="blue-gray"
           className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto lg:px-4 lg:py-2"
         >
-          {currentLanguage}
           <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
+              strokeWidth={2.5}
+              className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
               }`}
           />
+          {currentLanguage}
         </Button>
       </MenuHandler>
       <MenuList className="p-1">
