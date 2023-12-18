@@ -17,9 +17,7 @@ export default function NavbarCustom({openDrawer}) {
     return (<Navbar
             className="sticky h-[12vh] top-0 z-40 max-w-full overflow-hidden bg-[#060417] rounded-none shadow-none backdrop-saturate-0 backdrop-blur-0 bg-opacity-100 border-none  itmx-auto flex items-center justify-between text-white">
             <div className={"flex items-center justify-center"}>
-                <span className={"hidden lg:block"}>
-                    <LanguageMenu/>
-                </span>
+
                 <NavLink to={"/"}>
                     <Typography
                         as="a"
@@ -37,11 +35,13 @@ export default function NavbarCustom({openDrawer}) {
                 <NavListMenu/>
             </div>
 
-            <div className="flex justify-center items-center space-x-2">
-                <Bars3Icon className="h-6 w-6 lg:hidden" onClick={openDrawer}></Bars3Icon>
+        <div className="flex justify-center items-center space-x-2">
+            <Bars3Icon className="h-6 w-6 lg:hidden" onClick={openDrawer}></Bars3Icon>
+            <span className={"hidden lg:block"}>
+                    <LanguageMenu/>
+                </span>
+        </div>
 
-            </div>
 
-
-        </Navbar>);
+    </Navbar>);
 }
