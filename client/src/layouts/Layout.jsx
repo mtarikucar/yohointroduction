@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FooterCustom from "./Components/FooterCustom";
 import NavbarCustom from "./Components/Navbar/NavbarCustom";
-import DrawerCustom from "./Components/DrawerCustom";
+import DrawerCustom from "./Components/Drawer/DrawerCustom.jsx";
 import ScrollToTop from "../hooks/ScrollToTop";
 
 const Layout = () => {

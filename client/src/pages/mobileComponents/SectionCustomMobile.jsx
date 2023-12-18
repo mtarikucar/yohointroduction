@@ -47,7 +47,6 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
     }, [items]);
 
     const handleSelectCard = (index) => {
-        console.log(index);
         setSelectedCard(index);
         const scrollContainer = cardRefs[index].current.parentNode;
         const cardStart = cardRefs[index].current.offsetLeft;

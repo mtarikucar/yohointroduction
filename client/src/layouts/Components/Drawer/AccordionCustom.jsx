@@ -3,6 +3,8 @@ import {
     Accordion, AccordionHeader, AccordionBody, Typography,
 } from "@material-tailwind/react";
 import {useTranslation} from 'react-i18next';
+import {setSection} from "../../../store/SectionItemSlice.js";
+import {useDispatch} from "react-redux";
 
 function Icon({isOpen}) {
     return (<svg
@@ -21,7 +23,7 @@ export function AccordionCustom({closeDrawer}) {
     const [openIndex, setOpenIndex] = React.useState(null);
     const [activeHash, setActiveHash] = React.useState(window.location.hash);
     const {t} = useTranslation();
-
+    const dispatch =  useDispatch()
     const accordionItems = t('navListMenu.sections', {returnObjects: true});
 
     React.useEffect(() => {
@@ -51,7 +53,10 @@ export function AccordionCustom({closeDrawer}) {
                         {items.map(({title: itemTitle}) => (<>
                             <a key={itemTitle} href={`#${title}`}
                                className={` my-2 block ${activeHash === `#${title}` ? 'underline' : ''}`}
-                               onClick={() => closeDrawer()}>
+                               onClick={() => {
+                                   closeDrawer()
+                                   dispatch(setSection(itemTitle))
+                               }}>
                                 {itemTitle}
                             </a>
                             <hr/>
@@ -62,7 +67,10 @@ export function AccordionCustom({closeDrawer}) {
                     <a href={`#${title}`}
                        style={{color:""}}
                        className={`text-sm font-bold my-2 block ${activeHash === `#${title}` ? 'underline' : ''}`}
-                       onClick={() => closeDrawer()}>
+                       onClick={() => {
+                           closeDrawer()
+                           dispatch(setSection(title))
+                       }}>
                         {title}
                     </a>
 

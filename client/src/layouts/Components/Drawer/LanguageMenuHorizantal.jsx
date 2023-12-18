@@ -1,7 +1,7 @@
 
 import { Button} from "@material-tailwind/react";
 import {useDispatch, useSelector} from 'react-redux';
-import {setLanguage} from "../../../store/LanguageSlice";
+import {setLanguage} from "../../../store/LanguageSlice.js";
 import i18n from 'i18next';
 
 const LanguageItems = [

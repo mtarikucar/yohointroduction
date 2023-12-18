@@ -7,6 +7,8 @@ import {
 
 } from "@heroicons/react/24/solid";
 import {useTranslation} from 'react-i18next';
+import {useDispatch} from "react-redux";
+import {setSection} from "../../../store/SectionItemSlice.js";
 
 
 export default function NavListMenu() {
@@ -14,7 +16,7 @@ export default function NavListMenu() {
     const {t} = useTranslation();
 
     const navListMenuItems = t('navListMenu.sections', {returnObjects: true});
-
+    const dispatch = useDispatch()
 
     const toggleMenu = (index) => {
         if (openedMenuIndex === index) {
@@ -40,37 +42,41 @@ export default function NavListMenu() {
         };
     }, []);
 
-    return (<>
+    return (
+        <>
         {navListMenuItems.map(({title, items}, idx) => (
             <Menu key={idx} open={openedMenuIndex === idx} handler={() => toggleMenu(idx)} placement="bottom-end">
                 {idx != 2 ? < MenuHandler>
-                        < Button
-                            variant="text"
-                            color="white"
-                            className="flex items-center  rounded-full  lg:ml-auto font-thin text-xs"
-                            onClick={() => toggleMenu(idx)}
-                        >
-                            {title}
-                            <ChevronDownIcon
-                                strokeWidth={2.5}
-                                className={`h-3 w-3 transition-transform ${openedMenuIndex === idx ? "rotate-180" : ""}`}
-                            />
-                        </Button>
-                    </MenuHandler> :
+                    < Button
+                        variant="text"
+                        color="white"
+                        className="flex items-center  rounded-full  lg:ml-auto font-thin text-xs"
+                        onClick={() => toggleMenu(idx)}
+                    >
+                        {title}
+                        <ChevronDownIcon
+                            strokeWidth={2.5}
+                            className={`h-3 w-3 transition-transform ${openedMenuIndex === idx ? "rotate-180" : ""}`}
+                        />
+                    </Button>
+                </MenuHandler> :
                     <a href={`#${title}`}>
 
 
-                        < Button
-                            variant="text"
-                            color="white"
-                            className="flex items-center  rounded-full  lg:ml-auto font-thin text-xs"
+                    < Button
+                        variant="text"
+                        color="white"
+                        className="flex items-center  rounded-full  lg:ml-auto font-thin text-xs"
+                        onClick={() => {
+                            setOpenedMenuIndex(null)
+                            dispatch(setSection(title))
+                        }}
+                    >
+                        {title}
 
-                        >
-                            {title}
-                            
-                        </Button>
+                    </Button>
 
-                    </a>}
+                </a>}
                 <MenuList className="p-1">
                     {items.map(({title: menuItemTitle}) => (
 
@@ -78,8 +84,12 @@ export default function NavListMenu() {
                         <a href={`#${title}`}>
                             <MenuItem
                                 key={menuItemTitle}
-                                onClick={() => setOpenedMenuIndex(null)}
+                                onClick={() => {
+                                    dispatch(setSection(menuItemTitle))
+                                    setOpenedMenuIndex(null)
+                                }}
                                 className={`flex items-center gap-2 rounded ${activeHash === `#${title}` ? 'underline' : ''}`}
+
                             >
 
                                 <Typography

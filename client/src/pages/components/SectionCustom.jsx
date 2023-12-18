@@ -1,19 +1,20 @@
-import { Typography } from '@material-tailwind/react';
-import { useEffect, useRef, createRef, forwardRef, useState } from 'react'
-import { motion, useAnimation } from 'framer-motion';
+import {Typography} from '@material-tailwind/react';
+import {useEffect, useRef, createRef, forwardRef, useState} from 'react'
+import {motion, useAnimation} from 'framer-motion';
 import {useTranslation} from "react-i18next";
+import {useSelector} from "react-redux";
 
 
-function LeftSection({ introduction, title }) {
+function LeftSection({introduction, title}) {
     const textVariants = {
-        hidden: { y: '-40vh', opacity: 0.8 },
-        visible: { y: 0, opacity: 1, transition: { duration: 1.5 } }
+        hidden: {y: '-40vh', opacity: 0.8},
+        visible: {y: 0, opacity: 1, transition: {duration: 1.5}}
     };
 
     return (
         <div className="col-span-2 relative bg-gray-200">
 
-            <img src="../image_f1_big.png" alt="Description" className="h-full w-full object-cover" />
+            <img src="../image_f1_big.png" alt="Description" className="h-full w-full object-cover"/>
             <div className='absolute inset-0 grid h-full w-full items-center'>
                 <motion.div variants={textVariants} className='p-10'>
                     <Typography
@@ -36,7 +37,8 @@ function LeftSection({ introduction, title }) {
     );
 }
 
-function RightSection({ selectedCard, setSelectedCard, items, index }) {
+function RightSection({selectedCard, setSelectedCard, items, index}) {
+
     const cardRefs = useRef(items.map(() => createRef()));
 
     useEffect(() => {
@@ -45,21 +47,24 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
 
     const handleSelectCard = (index) => {
         setSelectedCard(index);
-        const scrollContainer = cardRefs[index].current.parentNode;
-        const cardStart = cardRefs[index].current.offsetLeft;
-        const cardMargin = window.getComputedStyle(cardRefs[index].current).marginLeft.replace('px', '');
-        const scrollPosition = cardStart - cardMargin;
-        scrollContainer.scrollTo({
-            right: scrollPosition,
-            behavior: 'smooth'
-        });
-    }
+
+        const selectedCardRef = cardRefs.current[index];
+
+        if (selectedCardRef && selectedCardRef.current) {
+            const scrollPosition = selectedCardRef.current.offsetLeft;
+            const scrollContainer = selectedCardRef.current.parentNode;
+            scrollContainer.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
         <div className="col-span-3">
-            <div className='p-10 h-full overflow-x-auto relative no-scrollbar snap-x snap-mandatory'>
+            <div className='p-10 h-full   no-scrollbar '>
 
-                <div className="flex space-x-4 ml-auto items-center h-full ">
+                <div className="flex space-x-4 ml-auto items-center h-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
                     {items.map((_, i) => (
                         <Card
                             key={i}
@@ -79,22 +84,30 @@ function RightSection({ selectedCard, setSelectedCard, items, index }) {
     );
 }
 
-const Card = forwardRef(({ number, title, img, isSelected, onSelect, content, delayMultiplier = 0 }, ref) => {
+const Card = forwardRef(({number, title, img, isSelected, onSelect, content, delayMultiplier = 0}, ref) => {
     const cardVariants = {
-        hidden: { x: '10vh', opacity: 0 },
-        visible: { x: 0, opacity: 1, transition: { duration: 0.5 } }
+        hidden: {x: '10vh', opacity: 0},
+        visible: {x: 0, opacity: 1, transition: {duration: 0.5}}
     };
     const {t} = useTranslation()
+    const sectionItem = useSelector(sectionItem => sectionItem.sectionItem)
+
+    useEffect(() => {
+        if (title === sectionItem.value) {
+            onSelect()
+        }
+    }, [sectionItem]);
+
     return (
         <motion.div
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.3 * delayMultiplier }}
+            transition={{delay: 0.3 * delayMultiplier}}
             variants={cardVariants}
             className={`relative flex-shrink-0 ${isSelected ? `w-[54%] bg-blue-500` : `w-[27%]`} ease-in-out duration-300 snap-center`}
             ref={ref}
         >
-            <img src={img} alt={title} className="h-full w-full object-cover max-h-[50vh]" />
+            <img src={img} alt={title} className="h-full w-full object-cover max-h-[50vh]"/>
 
             <div className='absolute inset-0 grid h-full w-full items-center text-white p-6'>
                 <div>
@@ -105,7 +118,8 @@ const Card = forwardRef(({ number, title, img, isSelected, onSelect, content, de
                 {
                     isSelected
                         ? <p className="mt-4">{content}</p>
-                        : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit" onClick={onSelect}>{t("click")}</button>
+                        : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit"
+                                  onClick={onSelect}>{t("click")}</button>
                 }
             </div>
         </motion.div>
@@ -113,14 +127,13 @@ const Card = forwardRef(({ number, title, img, isSelected, onSelect, content, de
 });
 
 
-function SectionCustom({ items, introduction, title, index }) {
+function SectionCustom({items, introduction, title, index}) {
     const [selectedCard, setSelectedCard] = useState(null);
     const controls = useAnimation();
     const sectionRef = useRef(null);
-
     const variants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+        hidden: {opacity: 0, y: 50},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.8}}
     };
 
     useEffect(() => {
@@ -150,6 +163,7 @@ function SectionCustom({ items, introduction, title, index }) {
         };
     }, [controls]);
 
+
     return (
         <motion.div
             ref={sectionRef}
@@ -158,8 +172,8 @@ function SectionCustom({ items, introduction, title, index }) {
             variants={variants}
             className='grid grid-cols-5 h-[100vh] bg-[#07051D]'
         >
-            <LeftSection introduction={introduction} title={title} />
-            <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items} index={index} />
+            <LeftSection introduction={introduction} title={title}/>
+            <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items} index={index}/>
         </motion.div>
     )
 }

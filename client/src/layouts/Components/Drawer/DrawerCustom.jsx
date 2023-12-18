@@ -4,9 +4,9 @@ import {
     Typography,
     IconButton,
 } from "@material-tailwind/react";
-import {AccordionCustom} from "./AccordionCustom";
-import LanguageMenu from "./Navbar/LanguageMenu.jsx";
-import LanguageMenuHorizantal from "./Navbar/LanguageMenuHorizantal.jsx";
+import {AccordionCustom} from "./AccordionCustom.jsx";
+import LanguageMenu from "../Navbar/LanguageMenu.jsx";
+import LanguageMenuHorizantal from "./LanguageMenuHorizantal.jsx";
 
 export default function DrawerCustom({open, setOpen}) {
 
