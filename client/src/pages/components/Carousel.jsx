@@ -30,6 +30,13 @@ export default function Carousel(props) {
                                 color="white"
                                 className="mb-4 text-3xl md:text-4xl lg:text-5xl"
                             >
+                                YOHO Fintech
+                            </Typography>
+                            <Typography
+                                variant="h1"
+                                color="white"
+                                className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+                            >
                                 {t('carousel.slide1.title')}
                             </Typography>
                             <Typography
@@ -124,8 +131,8 @@ export default function Carousel(props) {
                     </div>
                 </motion.div>
             </motion.div>
-           
-           
+
+
         </CarouselCustom>
     </>
     );

@@ -2,14 +2,16 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import tr from './locales/tr.json';
-import zh from './locales/zh-cn.json';
+import zhsmpl from './locales/zh-cn.json';
 import en from './locales/en.json'
+import zhtrd from "./locales/zh-hant.json"
 
 
 const resources = {
   en: { translation: en },
   tr: { translation: tr },
-  zh: { translation: zh }
+  zhsmpl: { translation: zhsmpl },
+  zhtrd: { translation: zhtrd }
 };
 
 

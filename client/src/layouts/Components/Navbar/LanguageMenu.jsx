@@ -19,8 +19,8 @@ import i18n from 'i18next';
 const LanguageItems = [
   { label: "Türkçe", code: "tr" },
   { label: "English", code: "en" },
-  { label: "繁體中文", code: "zh-cn" },
-   { label: "简体中文", code: "zh-hant" },
+  { label: "繁體中文", code: "zhsmpl" },
+   { label: "简体中文", code: "zhtrd" },
 ];
 
 
@@ -51,7 +51,7 @@ export default function LanguageMenu() {
               className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
               }`}
           />
-          {currentLanguage}
+          {LanguageItems.filter(item => item.code == currentLanguage).map(item =>item.label)}
         </Button>
       </MenuHandler>
       <MenuList className="p-1">
