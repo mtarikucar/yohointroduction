@@ -124,18 +124,20 @@ const Card = forwardRef(({number, title, img, isSelected, onSelect, content, del
         >
             <img src={img} alt={title} className="h-full w-full object-cover max-h-[50vh]"/>
 
-            <div id={title} className='absolute inset-0 grid h-full w-full items-center text-white p-6'>
-                <div>
+            <div id={title} className='absolute flex flex-col  justify-between inset-0 h-full w-full  text-white p-6'>
+                <div className={"h-full"}>
                     <span className="text-2xl border-b-2 border-solid border-white mb-2">{number}</span>
                     <p className='mt-2'>{title}</p>
                 </div>
+                <div className={"h-full items-center justify-start flex"}>
 
-                {
-                    isSelected
-                        ? <p className="mt-4">{content}</p>
-                        : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit"
-                                  onClick={onSelect}>{t("click")}</button>
-                }
+                    {
+                        isSelected
+                            ? <p className="mt-4">{content}</p>
+                            : <button className="mt-4 text-white bg-transparent border-2 p-2 backdrop-blur-lg w-fit flex items-start"
+                                      onClick={onSelect}>{t("click")}</button>
+                    }
+                </div>
             </div>
         </motion.div>
     );
@@ -191,19 +193,19 @@ function SectionCustom({items, introduction, title, index}) {
             <div className="sticky top-0 flex h-screen items-center w-full">
 
 
-                    <LeftSection introduction={introduction} title={title}/>
+                <LeftSection introduction={introduction} title={title}/>
 
 
-                    <motion.div style={{x}}
-                                animate={controls}
-                                variants={variants}
-                                initial="hidden"
-                                ref={sectionRef}
-                                className='flex bg-[#07051D]'
-                    >
-                        <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items}
-                                      index={index}/>
-                    </motion.div>
+                <motion.div style={{x}}
+                            animate={controls}
+                            variants={variants}
+                            initial="hidden"
+                            ref={sectionRef}
+                            className='flex bg-[#07051D]'
+                >
+                    <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items}
+                                  index={index}/>
+                </motion.div>
 
             </div>
         </section>
