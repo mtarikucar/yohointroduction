@@ -74,7 +74,7 @@ function RightSection({selectedCard, setSelectedCard, items, index}) {
 
     return (
 
-        <div className='p-10 h-full w-full translate-x-[20vw]'>
+        <div className='p-10 h-full w-full '>
 
             <div
                 onWheel={handleScroll}
@@ -199,7 +199,7 @@ function SectionCustom({items, introduction, title, index}) {
                                 variants={variants}
                                 initial="hidden"
                                 ref={sectionRef}
-                                className='flex  bg-[#07051D]'
+                                className='flex bg-[#07051D]'
                     >
                         <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items}
                                       index={index}/>
