@@ -183,7 +183,7 @@ function SectionCustom({items, introduction, title, index}) {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", `-${items.length < 4 ? 0 : items.length * 7}%`]);
 
 
     return (

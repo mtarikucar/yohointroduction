@@ -40,27 +40,27 @@ export default function CarouselCustom({ children, setLockScroll }) {
 
 
     return (
-        <div id='carousel' onMouseEnter={() => { }} onMouseLeave={() => setLockScroll(false)} onWheel={handleScroll} className="relative h-full  bg-[#07051D] overflow-hidden">
+        <div id='carousel' onMouseEnter={() => { }} onMouseLeave={() => setLockScroll(false)} onWheel={handleScroll} className="relative h-full   bg-[#07051D] overflow-hidden">
             <motion.div
                 initial={{ x: `-${(100 / children.length)}%`, opacity: "0%" }}
                 animate={{ x: `-${activeIndex * (100 / children.length)}%`, opacity: "100%", transition: { duration: 1 } }}
                 transition={{ type: 'spring', stiffness: 300, damping: 300 }}
-                className="absolute rounded sm:rounded-none top-0 left-0 flex object-contain h-[82vh]"
+                className="absolute rounded sm:rounded-none top-0 left-0 flex object-contain h-[82vh] snap-y snap-mandatory"
                 style={{ width: `${children.length * 100}%` }}
             >
                 {React.Children.map(children, (child, index) => (
                     <div className=''>{child}</div>
                 ))}
             </motion.div>
-                <div className="absolute bottom-4 left-2/4 z-20 flex -translate-x-2/4 gap-2">
-                    {React.Children.map(children, (_, index) => (
-                        <span
-                            key={index}
-                            className={`block h-1 cursor-pointer rounded-2xl transition-all ${activeIndex === index ? "w-8 bg-white" : "w-4 bg-white/50"}`}
-                            onClick={() => setActiveIndex(index)}
-                        />
-                    ))}
-                </div>
+            <div className="absolute bottom-4 left-2/4 z-20 flex -translate-x-2/4 gap-2">
+                {React.Children.map(children, (_, index) => (
+                    <span
+                        key={index}
+                        className={`block h-1  cursor-pointer rounded-2xl transition-all ${activeIndex === index ? "w-8 bg-white" : "w-4 bg-white/50"}`}
+                        onClick={() => setActiveIndex(index)}
+                    />
+                ))}
+            </div>
 
 
             <button className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10" onClick={handlePrev}>

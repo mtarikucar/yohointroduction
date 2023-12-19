@@ -5,6 +5,7 @@ import CarouselMobile from "./mobileComponents/CarouselMobile";
 import SectionCustomMobile from "./mobileComponents/SectionCustomMobile";
 import {Typography} from "@material-tailwind/react";
 import CarouselCustomScroll from "../components/CarouselCustomScroll.jsx";
+import CarouselCustomComp from "./components/CarouselCustomComp.jsx";
 
 function Home() {
     const {t} = useTranslation();
@@ -28,7 +29,7 @@ function Home() {
     return (<>
         {isMobile ? (// Mobile Version
                 <div className={`h-full w-full overflow-y-scroll no-scrollbar scroll-smooth bg-[#07051D]`}>
-                    <div className="h-fit bg-[#07051D]">
+                    <div className="h-fit bg-[#07051D] no-scrollbar">
                         <Typography color="white" className="p-10 font-medium text-3xl break-keep">
                             YOHO金融技术 股份有限公司
                         </Typography>
@@ -67,8 +68,9 @@ function Home() {
                 </div>) :
             (// Desktop Version
                 <div className="bg-[#07051D] no-scrollbar scroll-smooth snap-y snap-mandatory">
-
-                    <CarouselCustomScroll/>
+                    <div className={"h-screen"}>
+                        <CarouselCustomComp/>
+                    </div>
                     {navListMenuItems.map(({title, items, introduction}, i) => (
                         <div key={i} id={title} className=" min-h-screen ">
                             <SectionCustom items={items} introduction={introduction} title={title} index={i}/>

@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <>
       <ScrollToTop />
-      <div className="flex flex-col h-screen justify-between scroll-smooth">
+      <div className="flex flex-col h-screen justify-between scroll-smooth no-scrollbar w-screen overflow-x-clip">
         <NavbarCustom openDrawer={openDrawer}/>
         <Outlet />
         <FooterCustom />

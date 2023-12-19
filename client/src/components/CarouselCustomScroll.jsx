@@ -46,9 +46,9 @@ export default function CarouselCustomScroll({children}) {
 
     return (<div id='carousel' onWheel={handleScroll}
                  className="bg-[#07051D] ">
-            <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+            <section ref={targetRef} className="relative h-[400vw] bg-neutral-900">
                 <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                    <motion.div style={{x}} className="flex gap-4">
+                    <motion.div style={{x}} className="flex">
                         <motion.div initial="hidden" animate="visible" className='relative lg:w-screen  '>
                             <img
                                 src="../banner01.png"
