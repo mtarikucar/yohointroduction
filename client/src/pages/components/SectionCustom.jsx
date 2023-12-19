@@ -1,6 +1,6 @@
 import {Typography} from '@material-tailwind/react';
 import {useEffect, useRef, createRef, forwardRef, useState} from 'react'
-import {motion, useAnimation} from 'framer-motion';
+import {motion, useAnimation, useScroll, useTransform} from 'framer-motion';
 import {useTranslation} from "react-i18next";
 import {useSelector} from "react-redux";
 
@@ -12,7 +12,7 @@ function LeftSection({introduction, title}) {
     };
 
     return (
-        <div className="col-span-2 relative bg-gray-200">
+        <div className="relative bg-gray-200 h-screen z-50 min-w-[40vw]">
 
             <img src="../image_f1_big.png" alt="Description" className="h-full w-full object-cover"/>
             <div className='absolute inset-0 grid h-full w-full items-center'>
@@ -37,6 +37,7 @@ function LeftSection({introduction, title}) {
     );
 }
 
+// eslint-disable-next-line react/prop-types
 function RightSection({selectedCard, setSelectedCard, items, index}) {
 
     const cardRefs = useRef(items.map(() => createRef()));
@@ -60,34 +61,47 @@ function RightSection({selectedCard, setSelectedCard, items, index}) {
         }
     };
 
-    return (
-        <div className="col-span-3">
-            <div className='p-10 h-full   no-scrollbar '>
+    const handleScroll = (event) => {
+        const container = event.target;
+        const scrollAmount = event.deltaY;
+        console.log(container)
+        container.scrollTo({
+            top: 0,
+            left: container.scrollLeft + scrollAmount,
+            behavior: 'smooth'
+        });
+    };
 
-                <div className="flex space-x-4 ml-auto items-center h-full overflow-x-auto snap-x snap-mandatory no-scrollbar">
-                    {items.map((_, i) => (
-                        <Card
-                            key={i}
-                            ref={cardRefs[i]}
-                            number={i > 8 ? `${i + 1}` : `0${i + 1}`}
-                            title={_.title}
-                            content={_.content}
-                            img={`../image_f${index + 1}_small_0${i + 1}.png`}
-                            isSelected={selectedCard === i}
-                            onSelect={() => handleSelectCard(i)}
-                            delayMultiplier={i}
-                        />
-                    ))}
-                </div>
+    return (
+
+        <div className='p-10 h-full w-full translate-x-[20vw]'>
+
+            <div
+                onWheel={handleScroll}
+                className="flex space-x-4  items-center  ">
+                {items.map((_, i) => (
+                    <Card
+                        key={i}
+                        ref={cardRefs[i]}
+                        number={i > 8 ? `${i + 1}` : `0${i + 1}`}
+                        title={_.title}
+                        content={_.content}
+                        img={`../image_f${index + 1}_small_0${i + 1}.png`}
+                        isSelected={selectedCard === i}
+                        onSelect={() => handleSelectCard(i)}
+                        delayMultiplier={i}
+                    />
+                ))}
             </div>
         </div>
+
     );
 }
 
 const Card = forwardRef(({number, title, img, isSelected, onSelect, content, delayMultiplier = 0}, ref) => {
     const cardVariants = {
-        hidden: {x: '10vh', opacity: 0},
-        visible: {x: 0, opacity: 1, transition: {duration: 0.5}}
+        hidden: {opacity: 0},
+        visible: {opacity: 1, transition: {duration: 0.5}}
     };
     const {t} = useTranslation()
     const sectionItem = useSelector(sectionItem => sectionItem.sectionItem)
@@ -104,12 +118,13 @@ const Card = forwardRef(({number, title, img, isSelected, onSelect, content, del
             animate="visible"
             transition={{delay: 0.3 * delayMultiplier}}
             variants={cardVariants}
-            className={`relative flex-shrink-0 ${isSelected ? `w-[54%] bg-blue-500` : `w-[27%]`} ease-in-out duration-300 snap-center`}
+            className={`relative flex-shrink-0 ${isSelected ? `w-96` : `w-64`} ease-in-out duration-300 snap-center`}
             ref={ref}
+
         >
             <img src={img} alt={title} className="h-full w-full object-cover max-h-[50vh]"/>
 
-            <div className='absolute inset-0 grid h-full w-full items-center text-white p-6'>
+            <div id={title} className='absolute inset-0 grid h-full w-full items-center text-white p-6'>
                 <div>
                     <span className="text-2xl border-b-2 border-solid border-white mb-2">{number}</span>
                     <p className='mt-2'>{title}</p>
@@ -163,18 +178,35 @@ function SectionCustom({items, introduction, title, index}) {
         };
     }, [controls]);
 
+    const targetRef = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: targetRef,
+    });
+
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+
 
     return (
-        <motion.div
-            ref={sectionRef}
-            initial="hidden"
-            animate={controls}
-            variants={variants}
-            className='grid grid-cols-5 h-[100vh] bg-[#07051D]'
-        >
-            <LeftSection introduction={introduction} title={title}/>
-            <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items} index={index}/>
-        </motion.div>
+        <section ref={targetRef} className={`relative h-[300vh] bg-neutral-900`}>
+            <div className="sticky top-0 flex h-screen items-center w-full">
+
+
+                    <LeftSection introduction={introduction} title={title}/>
+
+
+                    <motion.div style={{x}}
+                                animate={controls}
+                                variants={variants}
+                                initial="hidden"
+                                ref={sectionRef}
+                                className='flex  bg-[#07051D]'
+                    >
+                        <RightSection selectedCard={selectedCard} setSelectedCard={setSelectedCard} items={items}
+                                      index={index}/>
+                    </motion.div>
+
+            </div>
+        </section>
     )
 }
 
