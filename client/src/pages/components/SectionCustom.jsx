@@ -130,7 +130,6 @@ const Card = forwardRef(({number, title, img, isSelected, onSelect, content, del
                     <p className='mt-2'>{title}</p>
                 </div>
                 <div className={"h-full items-center justify-start flex"}>
-
                     {
                         isSelected
                             ? <p className="mt-4">{content}</p>

@@ -1,5 +1,4 @@
 
-import { Button} from "@material-tailwind/react";
 import {useDispatch, useSelector} from 'react-redux';
 import {setLanguage} from "../../../store/LanguageSlice.js";
 import i18n from 'i18next';
@@ -7,8 +6,8 @@ import i18n from 'i18next';
 const LanguageItems = [
     { label: "Türkçe", code: "tr" },
     { label: "English", code: "en" },
-    { label: "简体中文", code: "zhsmpl" },
-    { label: "繁體中文", code: "zhtrd" },
+/*    { label: "简体中文", code: "zhsmpl" },
+    { label: "繁體中文", code: "zhtrd" },*/
 ];
 
 

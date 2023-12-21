@@ -19,8 +19,8 @@ import i18n from 'i18next';
 const LanguageItems = [
   { label: "Türkçe", code: "tr" },
   { label: "English", code: "en" },
-  { label: "简体中文", code: "zhsmpl" },
-  { label: "繁體中文", code: "zhtrd" },
+/*  { label: "简体中文", code: "zhsmpl" },
+  { label: "繁體中文", code: "zhtrd" },*/
 ];
 
 
